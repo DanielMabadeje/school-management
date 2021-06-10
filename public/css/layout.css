@@ -6,6 +6,10 @@
     background: rgb(230, 131, 2);
 }
 
+.bg-other-faint{
+    background: rgba(230, 131, 2, 0.281) !important;
+}
+
 .text-other{
     color: rgb(230, 131, 2);
 }
