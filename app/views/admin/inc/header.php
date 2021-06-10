@@ -13,6 +13,6 @@
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/bootstrap.css">
 </head>
 
-<body>
+<body class="bg-light">
     <?php require APPROOT . '/views/admin/inc/navbar.php'; ?>
-    <div class="container">
+    <div class="container ">
