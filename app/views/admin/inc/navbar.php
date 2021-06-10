@@ -11,25 +11,25 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= URLROOT ?>">Home</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= URLROOT ?>pages/about">About</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>pages/about">About</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <?php if (isset($_SESSION['user_id'])) : ?> <li class="nav-item active">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Welcome <?= $_SESSION['user_name']; ?></a>
+                        <a class="nav-link bg-other btn mr-3 text-white pl-5 pr-5" href="#">User Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= URLROOT ?>users/logout">Logout</a>
+                        <a class="nav-link btn btn-danger text-white" href="<?= URLROOT ?>users/logout">Logout</a>
                     </li>
                 <?php else : ?>
-                    <a class="nav-link" href="<?= URLROOT ?>users/register">Register</a>
+                    <a class="nav-link text-dark" href="<?= URLROOT ?>users/register">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= URLROOT ?>users/login">Login</a>
+                        <a class="nav-link text-dark" href="<?= URLROOT ?>users/login">Login</a>
                     </li>
                 <?php endif; ?>
             </ul>
