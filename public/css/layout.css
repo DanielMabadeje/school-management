@@ -1,0 +1,11 @@
+.bg-black{
+    background: black !important;
+}
+
+.bg-other{
+    background: rgb(230, 131, 2);
+}
+
+.text-other{
+    color: rgb(230, 131, 2);
+}
