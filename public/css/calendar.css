@@ -5,7 +5,8 @@ body {font-family: Verdana, sans-serif;}
 .month {
     padding: 70px 25px;
     width: 100%;
-    background: #1abc9c;
+    /* background: #1abc9c; */
+    background: rgb(230, 131, 2);
 }
 
 /* Month list */
@@ -67,6 +68,7 @@ body {font-family: Verdana, sans-serif;}
 /* Highlight the "current" day */
 .days li .active {
     padding: 5px;
-    background: #1abc9c;
+    /* background: #1abc9c; */
+    background: rgb(230, 131, 2);
     color: white !important
 }
