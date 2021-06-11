@@ -16,7 +16,7 @@
 			<h2><span class="lab la-accusoft"></span><span>RUSIMS</span></h2>
 		</div>
 
-		<div><img src="ru_logo.jfif" alt="User Logo" width="100px" height="100px"></div>
+		<div><img src="<?= URLROOT; ?>/img/logo/ru_logo.jfif" alt="User Logo" width="100px" height="100px"></div>
 		
 		<div class="sidebar-menu">
 			<ul>

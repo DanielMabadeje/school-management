@@ -9,7 +9,7 @@
 
 /******************************************************************SIDEBAR MENU STYLE START**/
 .sidebar {
-	width: 345px;
+	width: 270px;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -83,7 +83,7 @@
 
 .main-content{
 	transition: margin-left 300ms;
-	margin-left: 345px;
+	margin-left: 270px;
 }
 /*************************************************HEADER STYLE*/
 header{
