@@ -17,6 +17,4 @@
 
     </main>
 </div>
-</body>
-
-</html>
+<?php require APPROOT . '/views/students/inc/footer.php'; ?>

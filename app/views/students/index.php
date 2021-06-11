@@ -74,3 +74,5 @@
 
   </main>
 </div>
+
+<?php require APPROOT . '/views/students/inc/footer.php'; ?>
