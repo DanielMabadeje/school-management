@@ -46,9 +46,10 @@
 				</li>
 
 				<li class="logout">
-					<a href="">
+					<a href="<?= URLROOT  ?>/pages/logout">
 						<span class="las la-clipboard-list"></span>
-					<span>Log Out</span></a>
+					    <span>Log Out</span>
+                    </a>
 				</li>
 
 			</ul>

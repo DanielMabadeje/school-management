@@ -9,7 +9,7 @@
 
 			<div class="search-wrapper">
 				<span class="las la-search"></span>
-				<input type="search" placeholder="Search Here">
+				<input type="search" placeholder="Search Here........">
 			</div>
 
 			<div class="user-wrapper">

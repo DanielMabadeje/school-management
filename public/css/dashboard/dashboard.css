@@ -122,6 +122,7 @@ header label span{
 	display: flex;
 	align-items: center;
 	overflow: hidden; 
+    height:40px;
 }
 
 .search-wrapper span{
