@@ -1,11 +1,11 @@
 <header>
-			<h1>
-				<label for="nav-toggle" style="background: black;">
+			<h3>
+				<!-- <label for="nav-toggle" style="background: black;">
 					<span class="las la-bars"></span>
-				</label>
+				</label> -->
 
-				<!-- Dashboard -->
-			</h1>
+				Dashboard
+			</h3>
 
 			<div class="search-wrapper">
 				<span class="las la-search"></span>
