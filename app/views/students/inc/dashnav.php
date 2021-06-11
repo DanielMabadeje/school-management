@@ -1,5 +1,5 @@
 <header class="mt-3 ml-2 mr-5">
-			<h3>
+			<h3 class="text-gray">
 				<!-- <label for="nav-toggle" style="background: black;">
 					<span class="las la-bars"></span>
 				</label> -->

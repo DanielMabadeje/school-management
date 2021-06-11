@@ -65,8 +65,12 @@
 	/* font-size: 1.1rem; */
 }
 
+.text-gray{
+	color:gray !important;
+}
 /*.sidebar-menu a*/.active{
-	background: #ffa500;
+	/* background: #ffa500; */
+	background: rgb(230, 131, 2);
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	color: #222;
@@ -188,7 +192,8 @@ main{
 }
 
 .faculty h1{
-	background: #ffa500;
+	/* background: #ffa500; */
+	background: rgb(230, 131, 2);
 	font-size: 2.3rem;
 	padding: 1rem;
 	border-radius: 2%;
