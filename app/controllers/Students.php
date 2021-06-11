@@ -10,6 +10,25 @@ class Students extends Controller
     {
         $this->view('students/index');
     }
+
+    public function courses($course_id)
+    {
+        # code...
+    }
+
+
+    public function students()
+    {
+        # code...
+    }
+
+
+    public function attendance($course_id = null)
+    {
+        # code...
+    }
+
+
     public function register()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {

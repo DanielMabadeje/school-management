@@ -5,6 +5,7 @@
 	list-style-type: none;
 	text-decoration: none;
 	font-family: 'Popping', sans-serif;
+	/* overflow: auto; */
 }
 
 /******************************************************************SIDEBAR MENU STYLE START**/
@@ -17,6 +18,7 @@
 	background: #222;
 	z-index: 100%;
 	transition: width 300ms;
+	overflow: auto !important;
 }
 
 .block{
