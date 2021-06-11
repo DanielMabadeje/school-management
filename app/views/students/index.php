@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>Admin Dashboard</title>
@@ -10,7 +10,7 @@
 
 <body>
 
-	<input type="checkbox" name="" id="nav-toggle">
+	<input type="checkbox" name="" id="nav-toggle"> -->
 	<!-- <div class="sidebar">
 		<div class="sidebar-brand">
 			<h2><span class="lab la-accusoft"></span><span>RUSIMS</span></h2>
@@ -65,7 +65,7 @@
 			</ul>
 		</div>
 	</div> -->
-
+    <?php require APPROOT . '/views/students/inc/header.php'; ?>
 	<div class="main-content">
 		<header>
 			<h1>

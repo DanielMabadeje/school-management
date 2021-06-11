@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="<?= URLROOT ?>/css/dashboard/dashboard.css">
+
 <div class="sidebar">
 		<div class="sidebar-brand">
 			<h2><span class="lab la-accusoft"></span><span>RUSIMS</span></h2>
