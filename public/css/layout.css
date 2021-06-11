@@ -3,7 +3,7 @@
 }
 
 .bg-other{
-    background: rgb(230, 131, 2);
+    background: rgb(230, 131, 2) !important;
 }
 
 .bg-other-faint{
