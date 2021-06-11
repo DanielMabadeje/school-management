@@ -1,13 +1,13 @@
 <link rel="stylesheet" type="text/css" href="<?= URLROOT ?>/css/dashboard/dashboard.css">
 
-<div class="sidebar">
+<div class="sidebar pb-5">
 		<div class="sidebar-brand">
 			<h2><span class="lab la-accusoft"></span><span>RUSIMS</span></h2>
 		</div>
 
 		<div class="col-12"><img src="<?= URLROOT; ?>/img/logo/ru_logo.jfif" alt="User Logo" height="100%" width="70%"></div>
 		
-		<div class="sidebar-menu">
+		<div class="sidebar-menu pb-5">
 			<ul>
 				<li class="active">
 					<a href="">
@@ -45,7 +45,7 @@
 					<span>Messages</span></a>
 				</li>
 
-				<li class="logout">
+				<li class="logout bg-danger pt-3 pb-3">
 					<a href="<?= URLROOT  ?>/pages/logout">
 						<span class="las la-clipboard-list"></span>
 					    <span>Log Out</span>
