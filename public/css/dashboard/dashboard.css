@@ -94,11 +94,12 @@ header{
 	padding: 1rem 1.5rem;
 	box-shadow: 2.5px 2.5px 5px rgba(0,0,0,0.2);
 	position: fixed;
-	left: 345px;
-	width: calc(100% - 345px);
+	left: 270px;
+	width: calc(100% - 270px);
 	top: 0;
 	z-index: 100;
 	transition: width 300ms;
+    height: 20%;
 }
 
 header h2{
@@ -155,7 +156,7 @@ header label span{
 main{
 	margin-top: 90px;
 	padding: 2rem 1.5rem;
-	background: #f1f5f9;
+	/* background: #f1f5f9; */
 	/*background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(ru_logo.jfif) center/cover no-repeat fixed;*/
 	min-height: calc(100vh - 90px);
 }
