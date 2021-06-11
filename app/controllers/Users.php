@@ -184,6 +184,22 @@ class Users extends Controller
     }
 
 
+
+
+    public function dashboard($page){
+
+
+        switch ($page) {
+            case 'value':
+                # code...
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+    }
+
     public function  createUserSession($user)
     {
         $_SESSION['user_id'] = $user->id;
