@@ -20,6 +20,7 @@ body {font-family: Verdana, sans-serif;}
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    text-align: center;
 }
 
 /* Previous button inside month header */

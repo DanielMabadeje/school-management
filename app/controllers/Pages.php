@@ -117,7 +117,7 @@ class Pages extends Controller
     {
         $_SESSION['user_id'] = $user->id;
         $_SESSION['email'] = $user->email;
-        // $_SESSION['user_name'] = $user->name;
+        $_SESSION['user_name'] = $user->username;
         $_SESSION['membership_group'] = $user->memberId;
 
         switch ($user->memberId) {

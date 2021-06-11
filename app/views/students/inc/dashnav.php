@@ -13,10 +13,10 @@
 			</div>
 
 			<div class="user-wrapper">
-				<img src="Images\download (4).jfif" width="30px" height="30px" alt="">
+				<img src="<?= URLROOT; ?>/img/profile.png.2018-04-24.1524590440.png" width="30px" height="30px" alt="">
 				<div>
-					<h4>John Doe</h4>
-					<small>Admin</small>
+					<h5><?= $_SESSION['user_name'] ?></h5>
+					<!-- <small>Admin</small> -->
 				</div>
 			</div>
 		</header>
