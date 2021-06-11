@@ -21,7 +21,7 @@
                     </div>
                     <div class="card-body p-0">
 
-                        <div class="pt-0 pb-4">
+                        <div class="pt-0 pb-1">
                             <h5 class="mb-0"></h5>
                             <p class="small text-muted"></p>
                             <table class="table col-12">
@@ -63,14 +63,14 @@
                 <div class="card">
 
                     <div class="card-header pt-0 pb-0 bg-other-faint">
-                        <h4>Users</h4>
+                        <h4>Staffs</h4>
                     </div>
                     <div class="card-body p-0">
 
-                        <div class="pt-0 pb-4">
+                        <div class="pt-0 pb-1">
                             <h5 class="mb-0"></h5>
                             <p class="small text-muted"></p>
-                            <table class="table col-12">
+                            <table class="table col-12 pt-0">
                                 <thead>
                                     <tr>
                                         <th> Name </th>
@@ -79,17 +79,17 @@
                                 </thead>
                                 <tbody id="order">
                                     <tr>
-                                        <td>Paypal</td>
+                                        <td>Okon Doe</td>
                                         <td> $14,000</td>
                                     </tr>
                                     <tr>
 
-                                        <td>Visa</td>
+                                        <td>John Doe</td>
                                         <td>$41,160</td>
                                     </tr>
                                     <tr>
 
-                                        <td>Paypal</td>
+                                        <td>Jane Richards</td>
                                         <td>$12,603</td>
                                     </tr>
                                     <tr>
