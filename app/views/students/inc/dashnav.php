@@ -1,4 +1,4 @@
-<header>
+<header class="mt-3 ml-2 mr-5">
 			<h3>
 				<!-- <label for="nav-toggle" style="background: black;">
 					<span class="las la-bars"></span>

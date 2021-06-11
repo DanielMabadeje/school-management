@@ -99,7 +99,7 @@ header{
 	top: 0;
 	z-index: 100;
 	transition: width 300ms;
-    height: 20%;
+    height: 10%;
 }
 
 header h2{
