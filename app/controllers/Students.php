@@ -19,7 +19,7 @@ class Students extends Controller
 
     public function students()
     {
-        # code...
+        $this->view('students/students');
     }
 
 
