@@ -8,7 +8,7 @@ class Students extends Controller
 
     public function Index()
     {
-        # code...
+        $this->view('students/index');
     }
     public function register()
     {
