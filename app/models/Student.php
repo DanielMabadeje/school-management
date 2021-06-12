@@ -107,5 +107,8 @@ class Student
     {
         $this->db->query('SELECT * FROM students_profile WHERE level= :level');
         $this->db->bind(':level', $level);
+
+
+        return $this->db->resultSet();
     }
 }
