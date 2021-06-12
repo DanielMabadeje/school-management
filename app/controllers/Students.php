@@ -14,10 +14,14 @@ class Students extends Controller
 
     public function courses($course_id = null)
     {
-        $user = $this->getProfile($_SESSION['user_id']);
-        $students = $this->studentModel->getCourses($user->level);
-        $data['courses'] = $students;
-        $this->view('students/courses', $data);
+        if (is_null($course_id)) {
+            $user = $this->getProfile($_SESSION['user_id']);
+            $courses = $this->studentModel->getCourses($user->level);
+            $data['courses'] = $courses;
+            $this->view('students/courses', $data);
+        } else {
+            # code...
+        }
     }
 
 
