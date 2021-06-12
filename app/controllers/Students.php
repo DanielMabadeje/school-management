@@ -191,8 +191,9 @@ class Students extends Controller
     }
 
 
-    public function getFaculty($user_id)
+    public function getProfile($user_id)
     {
-        # code...
+        $data = $this->studentModel->getStudentProfile($user_id);
+        return $data;
     }
 }
