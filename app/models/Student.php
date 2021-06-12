@@ -102,4 +102,9 @@ class Student
 
         return $this->db->resultSet();
     }
+
+    public function getCourses()
+    {
+        # code...
+    }
 }

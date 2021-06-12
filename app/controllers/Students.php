@@ -12,9 +12,9 @@ class Students extends Controller
         $this->view('students/index');
     }
 
-    public function courses($course_id)
+    public function courses($course_id = null)
     {
-        # code...
+        $user = $this->getProfile($_SESSION['user_id']);
     }
 
 
