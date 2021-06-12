@@ -17,8 +17,8 @@ class Students extends Controller
         if (is_null($course_id)) {
             $user = $this->getProfile($_SESSION['user_id']);
             $courses = $this->studentModel->getCourses($user->level);
-            var_dump($courses);
-            die;
+            // var_dump($courses);
+            // die;
             $data['courses'] = $courses;
             $this->view('students/courses', $data);
         } else {

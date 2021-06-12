@@ -105,7 +105,7 @@ class Student
 
     public function getCourses($level)
     {
-        $this->db->query('SELECT * FROM students_profile WHERE level= :level');
+        $this->db->query('SELECT * FROM courses WHERE level= :level');
         $this->db->bind(':level', $level);
 
 
