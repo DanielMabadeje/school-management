@@ -189,4 +189,10 @@ class Students extends Controller
         session_destroy();
         redirect('users/login');
     }
+
+
+    public function getFaculty($user_id)
+    {
+        # code...
+    }
 }

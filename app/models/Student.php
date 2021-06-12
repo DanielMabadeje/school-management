@@ -74,4 +74,17 @@ class Student
             return false;
         }
     }
+
+    public function getStudentProfile($user_id)
+    {
+        $this->db->query('SELECT * FROM students_profile WHERE user_id= :user_id');
+        $this->db->bind(':user_id', $user_id);
+
+        if ($row = $this->db->single()) {
+            $row->data = $this->getUserbyId($row->user_id);
+            return $row;
+        } else {
+            return false;
+        }
+    }
 }

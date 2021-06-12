@@ -86,6 +86,8 @@ class Pages extends Controller
 
                     if ($loggedInUser) {
                         //create session
+                        // var_dump($loggedInUser, $student->data);
+                        // die;
                         $this->createUserSession($loggedInUser);
                     } else {
                         $data['password_err'] = 'Password Incorrect';
