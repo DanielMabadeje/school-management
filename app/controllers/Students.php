@@ -19,7 +19,11 @@ class Students extends Controller
 
     public function students()
     {
-        $this->view('students/students');
+
+        $user = $this->getProfile($_SESSION['user_id']);
+        $students = $this->studentModel->getStudentByFaculty($user->faculty_id);
+        $data['students'] = $students;
+        $this->view('students/students', $data);
     }
 
 
