@@ -35,10 +35,10 @@
 
                                 <?php foreach ($data['students'] as $student) : ?>
                                     <tr>
-                                        <td></td>
+                                        <td><?= $student->name ?></td>
                                         <td><?= $student->reg_no ?></td>
                                         <td>Student</td>
-                                        <td></td>
+                                        <td><?= $student->department ?></td>
                                         <td></td>
                                     </tr>
 

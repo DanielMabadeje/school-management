@@ -92,7 +92,7 @@ class Student
     {
         if (is_null($level)) {
             // $this->db->query('SELECT * FROM students_profile WHERE faculty_id= :faculty_id');
-            $this->db->query('SELECT students.user_id, students.name, students_profile.faculty_id, students_profile.department_id, departments.name AS department
+            $this->db->query('SELECT students.user_id, students.name, students.reg_no, students_profile.faculty_id, students_profile.department_id, departments.name AS department
                               FROM students_profile
                               INNER JOIN students
                               ON students_profile.user_id=students.user_id
