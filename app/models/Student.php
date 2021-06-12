@@ -87,4 +87,19 @@ class Student
             return false;
         }
     }
+
+    public function getStudentdByFaculty($faculty_id, $level = null)
+    {
+        if (is_null($level)) {
+            $this->db->query('SELECT * FROM students_profile WHERE faculty_id= :faculty_id');
+            $this->db->bind(':faculty_id', $faculty_id);
+        } else {
+            $this->db->query('SELECT * FROM students_profile WHERE faculty_id= :faculty_id AND level=:level');
+            $this->db->bind(':faculty_id', $faculty_id);
+            $this->db->bind(':level', $level);
+        }
+
+
+        return $this->db->resultSet();
+    }
 }
