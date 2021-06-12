@@ -18,7 +18,7 @@
     <div class="bg-white mt-5 pt-5">
       <?php foreach ($data['courses'] as $course) : ?>
         <button class="accordion"><?= $course->name ?></button>
-        <div class="panel mt-3">
+        <div class="panel mb-3">
           <p><?= $course->description ?></p>
         </div>
       <?php endforeach; ?>
