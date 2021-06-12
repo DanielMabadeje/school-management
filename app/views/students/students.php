@@ -31,15 +31,19 @@
                                     <th> Academic Year</th>
                                 </tr>
                             </thead>
-                            <tbody id="order">
+                            <tbody>
 
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+                                <?php foreach ($data['students'] as $student) : ?>
+                                    <tr>
+                                        <td></td>
+                                        <td><?= $student->reg_no ?></td>
+                                        <td>Student</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+                                <?php endforeach; ?>
+
                     </div>
 
 
