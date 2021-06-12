@@ -4,6 +4,7 @@ class Students extends Controller
     public function __construct()
     {
         $this->userModel = $this->model('User');
+        $this->studentModel = $this->model('Student');
     }
 
     public function Index()
@@ -21,7 +22,7 @@ class Students extends Controller
     {
 
         $user = $this->getProfile($_SESSION['user_id']);
-        $students = $this->studentModel->getStudentByFaculty($user->faculty_id);
+        $students = $this->studentModel->getStudentsByFaculty($user->faculty_id);
         $data['students'] = $students;
         $this->view('students/students', $data);
     }

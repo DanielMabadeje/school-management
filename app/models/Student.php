@@ -88,7 +88,7 @@ class Student
         }
     }
 
-    public function getStudentdByFaculty($faculty_id, $level = null)
+    public function getStudentsByFaculty($faculty_id, $level = null)
     {
         if (is_null($level)) {
             $this->db->query('SELECT * FROM students_profile WHERE faculty_id= :faculty_id');
