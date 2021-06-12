@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="<?= URLROOT ?>/css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/accordion.css">
 
 
 </head>
