@@ -103,8 +103,9 @@ class Student
         return $this->db->resultSet();
     }
 
-    public function getCourses()
+    public function getCourses($level)
     {
-        # code...
+        $this->db->query('SELECT * FROM students_profile WHERE level= :level');
+        $this->db->bind(':level', $level);
     }
 }
