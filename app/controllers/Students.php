@@ -15,6 +15,9 @@ class Students extends Controller
     public function courses($course_id = null)
     {
         $user = $this->getProfile($_SESSION['user_id']);
+        $students = $this->studentModel->getCourses($user->level);
+        $data['courses'] = $students;
+        $this->view('students/courses', $data);
     }
 
 
