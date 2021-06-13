@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?= URLROOT ?>/css/dashboard/dashboard.css">
+<link rel="stylesheet" type="text/css" href="<?= URLROOT ?>/css/staff/dashboard.css">
 
 <div class="sidebar pb-5">
 	<div class="sidebar-brand">
