@@ -9,11 +9,13 @@ class Students extends Controller
 
     public function Index()
     {
+        $this->checkIfStudentIsLoggedIn();
         $this->view('students/index');
     }
 
     public function courses($course_id = null)
     {
+        $this->checkIfStudentIsLoggedIn();
         if (is_null($course_id)) {
             $user = $this->getProfile($_SESSION['user_id']);
             $courses = $this->studentModel->getCourses($user->level);
@@ -28,6 +30,7 @@ class Students extends Controller
     public function students()
     {
 
+        $this->checkIfStudentIsLoggedIn();
         $user = $this->getProfile($_SESSION['user_id']);
         $students = $this->studentModel->getStudentsByFaculty($user->faculty_id);
         // var_dump($students);
@@ -39,6 +42,7 @@ class Students extends Controller
 
     public function attendance($course_id = null)
     {
+        $this->checkIfStudentIsLoggedIn();
         $user = $this->getProfile($_SESSION['user_id']);
         $courses = $this->studentModel->getCourses($user->level);
     }
@@ -208,6 +212,7 @@ class Students extends Controller
 
     public function getProfile($user_id)
     {
+        $this->checkIfStudentIsLoggedIn();
         $data = $this->studentModel->getStudentProfile($user_id);
         return $data;
     }
