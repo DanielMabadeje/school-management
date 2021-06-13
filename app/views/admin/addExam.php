@@ -24,7 +24,7 @@
                     </div>
                     <div class="card-body p-0">
                         <div class="form p-5">
-                            <form action="" method="post">
+                            <form action="<?= URLROOT ?>/admins/addexam" method="post">
                                 <div class="form-group">
                                     <label for="name">Name <sup>*</sup></label>
                                     <input type="text" name="name" class="form-control form-control-lg" value="">
