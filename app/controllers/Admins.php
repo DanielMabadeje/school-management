@@ -25,4 +25,14 @@ class Admins extends Controller
     {
         # code...
     }
+
+    public function addExam()
+    {
+        # code...
+    }
+
+    public function addStaff()
+    {
+        # code...
+    }
 }
