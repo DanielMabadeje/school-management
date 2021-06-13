@@ -18,6 +18,6 @@ class Staffs extends Controller
 
     public function index()
     {
-        # code...
+        $this->view('staffs/index');
     }
 }
