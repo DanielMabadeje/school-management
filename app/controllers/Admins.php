@@ -23,12 +23,20 @@ class Admins extends Controller
 
     public function addStudent()
     {
-        # code...
+        if ($_SERVER['REQUEST_METHOD']=='POST') {
+            # code...
+        } else {
+            # code...
+        }
     }
 
     public function addExam()
     {
-        # code...
+        if ($_SERVER['REQUEST_METHOD']=="POST") {
+            # code...
+        } else {
+            # code...
+        }
     }
 
     public function addStaff()
