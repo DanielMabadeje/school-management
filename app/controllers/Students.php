@@ -211,5 +211,14 @@ class Students extends Controller
         $data = $this->studentModel->getStudentProfile($user_id);
         return $data;
     }
-    public function checkIfStudentIsLoggedIn(){}
+    private function checkIfStudentIsLoggedIn(){
+        if (isLoggedIn()) {
+
+            if($_SESSION['membership_group'] !== 'student') {
+                redirect('/');
+            }
+        }else{
+            redirect('/');
+        }
+    }
 }
