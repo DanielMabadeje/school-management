@@ -23,7 +23,7 @@
                         <h4>Add Exam</h4>
                     </div>
                     <div class="card-body p-0">
-                        <div class="form">
+                        <div class="form p-5">
                             <form action="" method="post">
                                 <div class="form-group">
                                     <label for="name">Name <sup>*</sup></label>
@@ -47,8 +47,8 @@
                                 </div>
 
                 
-                                <div class="col-6">
-                                    <input type="submit" value="Add Exam" class="btn btn-primary btn-block">
+                                <div class="form-group">
+                                    <input type="submit" value="Add Exam" class="btn btn-primary btn-block col-6 p-3">
                                 </div>
                     
                 
