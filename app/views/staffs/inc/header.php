@@ -18,4 +18,4 @@
 <body class="bg-light">
 
     <input type="checkbox" name="" id="nav-toggle">
-    <?php require APPROOT . '/views/students/inc/sidebar.php'; ?>
+    <?php require APPROOT . '/views/staffs/inc/sidebar.php'; ?>
