@@ -20,4 +20,9 @@ class Admins extends Controller
 
         $this->view('admin/index');
     }
+
+    public function addStudent()
+    {
+        # code...
+    }
 }
