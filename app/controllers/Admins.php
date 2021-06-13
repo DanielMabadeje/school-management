@@ -40,4 +40,14 @@ class Admins extends Controller
     {
         # code...
     }
+
+    public function settings()
+    {
+        # code...
+    }
+
+    public function editProfile()
+    {
+        # code...
+    }
 }
