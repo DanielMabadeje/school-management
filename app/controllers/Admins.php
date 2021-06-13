@@ -35,4 +35,9 @@ class Admins extends Controller
     {
         # code...
     }
+
+    public function studentView()
+    {
+        # code...
+    }
 }
