@@ -211,4 +211,5 @@ class Students extends Controller
         $data = $this->studentModel->getStudentProfile($user_id);
         return $data;
     }
+    public function chechIfStudentIsLoggedIn(){}
 }
