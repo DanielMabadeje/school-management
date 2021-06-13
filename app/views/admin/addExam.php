@@ -23,39 +23,38 @@
                         <h4>Users</h4>
                     </div>
                     <div class="card-body p-0">
+                        <div class="form">
+                        <form action="<?= URLROOT ?>users/register" method="post">
+                <div class="form-group">
+                    <label for="name">Name <sup>*</sup></label>
+                    <input type="text" name="name" class="form-control form-control-lg <?= (!empty($data['name_err'])) ? 'is-invalid' : ''; ?>" value="<?= $data['name']; ?>">
+                    <span class="invalid-feedback"><?= $data['name_err']; ?></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <sup>*</sup></label>
+                    <input type="email" name="email" class="form-control form-control-lg <?= (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="<?= $data['email']; ?>">
+                    <span class="invalid-feedback"><?= $data['email_err']; ?></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password: <sup>*</sup></label>
+                    <input type="password" name="password" class="form-control form-control-lg <?= (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?= $data['password']; ?>">
+                    <span class="invalid-feedback"><?= $data['password_err']; ?></span>
+                </div>
+                <div class="form-group">
+                    <label for="name">Confirm Password: <sup>*</sup></label>
+                    <input type="password" name="confirm_password" class="form-control form-control-lg <?= (!empty($data['confirm_password_err'])) ? 'is-invalid' : ''; ?>" value="<?= $data['confirm_password']; ?>">
+                    <span class="invalid-feedback"><?= $data['confirm_password_err']; ?></span>
+                </div>
 
-                        <div class="pt-0 pb-1">
-                            <h5 class="mb-0"></h5>
-                            <p class="small text-muted"></p>
-                            <table class="table col-12">
-                                <thead>
-                                    <tr>
-                                        <th> Name </th>
-                                        <th> Registered </th>
-                                    </tr>
-                                </thead>
-                                <tbody id="order">
-                                    <tr>
-                                        <td>Paypal</td>
-                                        <td> $14,000</td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Visa</td>
-                                        <td>$41,160</td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Paypal</td>
-                                        <td>$12,603</td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Paypal</td>
-                                        <td>$91,231</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="row">
+                    <div class="col">
+                        <input type="submit" value="Register" class="btn btn-success btn-block">
+                    </div>
+                    <div class="col">
+                        <a href="<?= URLROOT; ?>users/login " class="btn btn-light btn-block">Have an account? Login</a>
+                    </div>
+                </div>
+            </form>
                         </div>
                     </div>
                 </div>
