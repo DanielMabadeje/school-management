@@ -26,7 +26,7 @@ class Admins extends Controller
         if ($_SERVER['REQUEST_METHOD']=='POST') {
             # code...
         } else {
-            # code...
+            $this->view('admin/addStudent');
         }
     }
 
