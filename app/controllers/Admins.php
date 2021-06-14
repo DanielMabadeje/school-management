@@ -53,7 +53,22 @@ class Admins extends Controller
 
     public function addStaff()
     {
-        # code...
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $data = [
+                'name' => trim($_POST['name']),
+                'description' => trim($_POST['description']),
+                'course_id' => trim($_POST['course']),
+                'department_id' => trim($_POST['department'])
+            ];
+
+            if ($this->examModel->addExam($data)) {
+                redirect('/');
+            } else {
+                # code...
+            }
+        } else {
+            $this->view('admin/addStaff');
+        }
     }
 
     public function studentView()
