@@ -35,13 +35,17 @@ class Admins extends Controller
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $data = [
-                'name' => '',
-                'description' => '',
-                'course_id' => '',
-                'department_id' => ''
+                'name' => trim($_POST['name']),
+                'description' => trim($_POST['description']),
+                'course_id' => trim($_POST['course']),
+                'department_id' => trim($_POST['department'])
             ];
 
-            $this->examModel->addExam($data);
+            if ($this->examModel->addExam($data)) {
+                redirect('/');
+            } else {
+                # code...
+            }
         } else {
             $this->view('admin/addExam');
         }

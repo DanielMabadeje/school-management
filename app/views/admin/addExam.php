@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">Description <sup>*</sup></label>
-                                <input type="text" name="name" class="form-control form-control-lg <?= (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="">
+                                <input type="text" name="description" class="form-control form-control-lg <?= (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="">
                                 <span class="invalid-feedback"></span>
                             </div>
                             <div class="form-group">
@@ -42,7 +42,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Department: <sup>*</sup></label>
-                                <input type="text" name="confirm_password" class="form-control form-control-lg " value="">
+                                <input type="text" name="department" class="form-control form-control-lg " value="">
                                 <span class="invalid-feedback"><?= $data['confirm_password_err']; ?></span>
                             </div>
 

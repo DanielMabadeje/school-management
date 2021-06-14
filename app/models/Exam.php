@@ -16,6 +16,6 @@ class Exam
     }
     public function addExam($data)
     {
-        # code...
+        var_dump($data);
     }
 }
