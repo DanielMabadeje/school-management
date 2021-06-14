@@ -39,6 +39,8 @@ class Admins extends Controller
                 'course_id' => '',
                 'department_id' => ''
             ];
+
+            $this->AdminModel->addExam($data);
         } else {
             $this->view('admin/addExam');
         }
