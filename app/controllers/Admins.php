@@ -23,7 +23,7 @@ class Admins extends Controller
 
     public function addStudent()
     {
-        if ($_SERVER['REQUEST_METHOD']=='POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             # code...
         } else {
             $this->view('admin/addStudent');
@@ -32,8 +32,13 @@ class Admins extends Controller
 
     public function addExam()
     {
-        if ($_SERVER['REQUEST_METHOD']=="POST") {
-            # code...
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $data = [
+                'name' => '',
+                'description' => '',
+                'course_id' => '',
+                'department_id' => ''
+            ];
         } else {
             $this->view('admin/addExam');
         }
