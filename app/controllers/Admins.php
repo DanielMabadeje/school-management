@@ -14,6 +14,7 @@ class Admins extends Controller
         }
         $this->userModel = $this->model('User');
         $this->studentModel = $this->model('Student');
+        $this->examModel = $this->model('Exam');
     }
     public function Index()
     {
@@ -40,7 +41,7 @@ class Admins extends Controller
                 'department_id' => ''
             ];
 
-            $this->AdminModel->addExam($data);
+            $this->examModel->addExam($data);
         } else {
             $this->view('admin/addExam');
         }

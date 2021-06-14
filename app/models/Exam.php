@@ -14,4 +14,8 @@ class Exam
     {
         $this->db = new Database;
     }
+    public function addExam($data)
+    {
+        # code...
+    }
 }
