@@ -85,4 +85,9 @@ class Admins extends Controller
     {
         # code...
     }
+
+    private function getStudents($limit=10)
+    {
+        # code...
+    }
 }

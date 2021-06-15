@@ -124,4 +124,14 @@ class Student
 
         return $this->db->resultSet();
     }
+
+
+    public function getAllStudent($limit=null)
+    {
+        if (is_null($limit)) {
+            # code...
+        } else {
+            # code...
+        }
+    }
 }
