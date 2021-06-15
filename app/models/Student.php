@@ -129,7 +129,7 @@ class Student
     public function getAllStudent($limit=null)
     {
         if (is_null($limit)) {
-            # code...
+            $this->db->query('SELECT * FROM students');
         } else {
             # code...
         }
