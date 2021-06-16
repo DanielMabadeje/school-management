@@ -29,14 +29,14 @@
                                     <thead>
                                         <tr>
                                             <th> Name </th>
-                                            <th> Registered </th>
+                                            <th> Reg No </th>
                                         </tr>
                                     </thead>
                                     <tbody id="order">
                                         <?php foreach ($data['students'] as $student) : ?>
                                             <tr>
-                                                <td>Okon Doe</td>
-                                                <td> 14,000</td>
+                                                <td><?= $student->name; ?></td>
+                                                <td> <?= $student->reg_no; ?></td>
                                             </tr>
 
                                         <?php endforeach; ?>

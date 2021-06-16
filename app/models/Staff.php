@@ -17,6 +17,11 @@ class Staff
 
     public function getAllStaff($limit = null)
     {
-        # code...
+        if (is_null($limit)) {
+            $this->db->query('SELECT * FROM students');
+            return $this->db->resultSet();
+        } else {
+            # code...
+        }
     }
 }
