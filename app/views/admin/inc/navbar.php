@@ -25,7 +25,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">View Groups</a>
                         <!-- <a class="dropdown-item" href="#">Another action</a> -->
-                        
+
                     </div>
                 </li>
 
@@ -47,7 +47,7 @@
                         Exams
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Add Exams</a>
+                        <a class="dropdown-item" href="<?= URLROOT ?>/admins/addExam">Add Exams</a>
                         <a class="dropdown-item" href="#">View Exams</a>
                         <div class="dropdown-divider"></div>
                         <!-- <a class="dropdown-item" href="#">Something else here</a> -->
