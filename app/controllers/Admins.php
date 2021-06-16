@@ -18,8 +18,10 @@ class Admins extends Controller
     }
     public function Index()
     {
-
-        $this->view('admin/index');
+        $data = [];
+        $students = $this->getStudents();
+        $data['students'] = $students;
+        $this->view('admin/index', $data);
     }
 
     public function addStudent()

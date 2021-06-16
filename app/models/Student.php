@@ -126,7 +126,7 @@ class Student
     }
 
 
-    public function getAllStudent($limit = null)
+    public function getAllStudents($limit = null)
     {
         if (is_null($limit)) {
             $this->db->query('SELECT * FROM students');

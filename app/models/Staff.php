@@ -14,4 +14,9 @@ class Staff
     {
         $this->db = new Database;
     }
+
+    public function getAllStaff($limit = null)
+    {
+        # code...
+    }
 }
