@@ -18,7 +18,7 @@
                     <div class="card ">
 
                         <div class="card-header pt-0 pb-0 bg-other-faint">
-                            <h4>Users</h4>
+                            <h4>Students</h4>
                         </div>
                         <div class="card-body p-0">
 
