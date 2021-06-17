@@ -80,7 +80,10 @@ class Admins extends Controller
 
     public function getExam()
     {
-        $this->view('admin/viewExams');
+
+        $data = [];
+        $data['exams'] = $this->getExams();
+        $this->view('admin/viewExams', $data);
     }
     public function studentView()
     {

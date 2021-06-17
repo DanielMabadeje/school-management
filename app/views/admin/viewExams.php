@@ -7,9 +7,11 @@
         <h2 class="display-4">All Exams</h2>
 
         <section class="row pt-5">
-            <div class="col-md-4">
-                <div class="card">Hi</div>
-            </div>
+            <?php foreach ($data['exams'] as $exam) : ?>
+                <div class="col-md-4">
+                    <div class="card"><?= $exam->name ?></div>
+                </div>
+            <?php endforeach; ?>
         </section>
     </section>
 </section>
