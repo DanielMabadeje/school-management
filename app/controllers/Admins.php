@@ -45,6 +45,7 @@ class Admins extends Controller
             ];
 
             if ($this->examModel->addExam($data)) {
+                flash('add_exam_success', 'Exams Added successfully');
                 redirect('/');
             } else {
                 # code...
