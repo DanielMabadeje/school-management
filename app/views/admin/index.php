@@ -155,17 +155,17 @@
                                     <tbody id="order">
                                         <tr>
                                             <td>Total Members</td>
-                                            <td> 14,000</td>
+                                            <td><?= $data['stats']['allUsers'][0]->count ?></td>
                                         </tr>
                                         <tr>
 
                                             <td>Active Members</td>
-                                            <td>41,160</td>
+                                            <td><?= $data['stats']['activeUsers'][0]->count; ?></td>
                                         </tr>
                                         <tr>
 
                                             <td>Banned Members</td>
-                                            <td>41,160</td>
+                                            <td><?= $data['stats']['bannedUsers'][0]->count; ?></td>
                                         </tr>
                                         <tr>
 

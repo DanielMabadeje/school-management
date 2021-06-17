@@ -21,6 +21,7 @@ class Admins extends Controller
         $data = [];
         $students = $this->getStudents();
         $data['students'] = $students;
+        $data['stats'] = $this->stats();
         $this->view('admin/index', $data);
     }
 
@@ -97,9 +98,11 @@ class Admins extends Controller
     private function stats()
     {
         $data = [];
-        $data['allUsers'] = $this->userModel->getAllUsers(true);
+        $data['allUsers'] = $this->userModel->getUsers(true);
+        $data['activeUsers'] = $this->userModel->getActiveUsers(true);
+        $data['bannedUsers'] = $this->userModel->getBannedUsers(true);
 
 
-        return true;
+        return $data;
     }
 }

@@ -65,7 +65,7 @@ class User
     public function getUsers($count = false)
     {
         if ($count) {
-            $this->db->query('SELECT COUNT(id) FROM users');
+            $this->db->query('SELECT COUNT(id) AS count FROM users');
         } else {
             $this->db->query('SELECT * FROM users');
         }
@@ -75,7 +75,7 @@ class User
     public function getActiveUsers($count = false)
     {
         if ($count) {
-            $this->db->query('SELECT COUNT(id) FROM users WHERE isApproved=:isApproved');
+            $this->db->query('SELECT COUNT(id) AS count FROM users WHERE isApproved=:isApproved');
         } else {
             $this->db->query('SELECT * FROM users WHERE isApproved=:isApproved');
         }
@@ -87,7 +87,7 @@ class User
     public function getBannedUsers($count = false)
     {
         if ($count) {
-            $this->db->query('SELECT COUNT(id) FROM users WHERE isBanned=:isBanned');
+            $this->db->query('SELECT COUNT(id) AS count FROM users WHERE isBanned=:isBanned');
         } else {
             $this->db->query('SELECT * FROM users WHERE isBanned=:isBanned');
         }
