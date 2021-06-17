@@ -24,6 +24,7 @@ class Admins extends Controller
         $data['students'] = $students;
         $data['staff'] = $this->getStaffs();
         $data['stats'] = $this->stats();
+        $data['exams'] = $this->getExams();
         $this->view('admin/index', $data);
     }
 
@@ -117,5 +118,7 @@ class Admins extends Controller
 
     private function getExams()
     {
+        $data = $this->examModel->getExams();
+        return $data;
     }
 }

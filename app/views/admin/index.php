@@ -49,6 +49,8 @@
                 </div>
 
 
+
+                <!-- staffs -->
                 <div class="col-md-6 mb-4">
                     <div class="card">
 
@@ -84,6 +86,8 @@
                     </div>
                 </div>
 
+                <!-- end staff -->
+
 
 
 
@@ -109,25 +113,13 @@
                                         </tr>
                                     </thead>
                                     <tbody id="order">
-                                        <tr>
-                                            <td>Paypal</td>
-                                            <td> 14,000</td>
-                                        </tr>
-                                        <tr>
+                                        <?php foreach ($data['exams'] as $exam) : ?>
+                                            <tr>
+                                                <td><?= $exam->name; ?></td>
+                                                <!-- <td> <?= $exam->reg_no; ?></td> -->
+                                            </tr>
 
-                                            <td>Visa</td>
-                                            <td>41,160</td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>Paypal</td>
-                                            <td>12,603</td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>Paypal</td>
-                                            <td>91,231</td>
-                                        </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
