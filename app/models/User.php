@@ -62,12 +62,25 @@ class User
         return $row;
     }
 
-    public function getUsers()
+    public function getUsers($count = false)
     {
-        # code...
+        if ($count) {
+            $this->db->query('SELECT COUNT(id) FROM users');
+        } else {
+            $this->db->query('SELECT * FROM users');
+        }
     }
 
-    public function getActiveUsers()
+    public function getActiveUsers($count = false)
+    {
+        if ($count) {
+            $this->db->query('SELECT COUNT(id) FROM users');
+        } else {
+            $this->db->query('SELECT * FROM users');
+        }
+    }
+
+    public function getBannedUsers(Type $var = null)
     {
         # code...
     }
