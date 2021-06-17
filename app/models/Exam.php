@@ -31,4 +31,10 @@ class Exam
             return false;
         }
     }
+
+    public function getExams()
+    {
+        $this->db->query('SELECT * FROM exams');
+        return $this->db->resultSet();
+    }
 }

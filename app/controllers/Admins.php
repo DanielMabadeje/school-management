@@ -114,4 +114,8 @@ class Admins extends Controller
 
         return $data;
     }
+
+    private function getExams()
+    {
+    }
 }
