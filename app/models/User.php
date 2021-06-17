@@ -61,4 +61,14 @@ class User
         $row = $this->db->single();
         return $row;
     }
+
+    public function getUsers()
+    {
+        # code...
+    }
+
+    public function getActiveUsers()
+    {
+        # code...
+    }
 }
