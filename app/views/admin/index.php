@@ -68,13 +68,14 @@
                                         </tr>
                                     </thead>
                                     <tbody id="order">
-                                        <?php foreach ($data['students'] as $student) : ?>
+                                        <?php foreach ($data['staff'] as $staff) : ?>
                                             <tr>
-                                                <td>Okon Doe</td>
-                                                <td> 14,000</td>
+                                                <td><?= $staff->username; ?></td>
+                                                <td> <?= $staff->created_at; ?></td>
                                             </tr>
 
                                         <?php endforeach; ?>
+
 
                                     </tbody>
                                 </table>
