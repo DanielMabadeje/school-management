@@ -93,4 +93,13 @@ class Admins extends Controller
         $data = $this->studentModel->getAllStudents();
         return $data;
     }
+
+    private function stats()
+    {
+        $data = [];
+        $data['allUsers'] = $this->userModel->getAllUsers(true);
+
+
+        return true;
+    }
 }
