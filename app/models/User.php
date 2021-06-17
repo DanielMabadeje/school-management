@@ -69,19 +69,30 @@ class User
         } else {
             $this->db->query('SELECT * FROM users');
         }
+        return $this->db->resultSet();
     }
 
     public function getActiveUsers($count = false)
     {
         if ($count) {
-            $this->db->query('SELECT COUNT(id) FROM users');
+            $this->db->query('SELECT COUNT(id) FROM users WHERE isApproved=:isApproved');
         } else {
-            $this->db->query('SELECT * FROM users');
+            $this->db->query('SELECT * FROM users WHERE isApproved=:isApproved');
         }
+        $this->db->bind(':isApproved', 1);
+
+        return $this->db->resultSet();
     }
 
-    public function getBannedUsers(Type $var = null)
+    public function getBannedUsers($count = false)
     {
-        # code...
+        if ($count) {
+            $this->db->query('SELECT COUNT(id) FROM users WHERE isBanned=:isBanned');
+        } else {
+            $this->db->query('SELECT * FROM users WHERE isBanned=:isBanned');
+        }
+        $this->db->bind(':isBanned', 1);
+
+        return $this->db->resultSet();
     }
 }
