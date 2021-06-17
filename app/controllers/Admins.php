@@ -14,6 +14,7 @@ class Admins extends Controller
         }
         $this->userModel = $this->model('User');
         $this->studentModel = $this->model('Student');
+        $this->staffModel = $this->model('Staff');
         $this->examModel = $this->model('Exam');
     }
     public function Index()
@@ -21,6 +22,7 @@ class Admins extends Controller
         $data = [];
         $students = $this->getStudents();
         $data['students'] = $students;
+        $data['staff'] = $this->getStaffs();
         $data['stats'] = $this->stats();
         $this->view('admin/index', $data);
     }
@@ -93,6 +95,12 @@ class Admins extends Controller
     private function getStudents($limit = 10)
     {
         $data = $this->studentModel->getAllStudents();
+        return $data;
+    }
+
+    private function getStaffs()
+    {
+        $data = $this->staffModel->getAllStaff();
         return $data;
     }
 
