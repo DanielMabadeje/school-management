@@ -16,37 +16,32 @@
 			</li>
 
 			<li>
-				<a href="<?= URLROOT ?>students/faculty">
+				<a href="<?= URLROOT ?>staffs/faculty">
 					<span class="las la-users"></span>
 					<span>Faculty</span></a>
 			</li>
 
 			<li>
-				<a href="<?= URLROOT ?>students/students">
+				<a href="<?= URLROOT ?>staffs/students">
 					<span class="las la-clipboard-list"></span>
 					<span>Students</span></a>
 			</li>
 
 			<li>
-				<a href="<?= URLROOT ?>students/courses">
+				<a href="<?= URLROOT ?>staffs/assignment">
 					<span class="las la-shipping-bag"></span>
-					<span>Courses</span></a>
+					<span>Assignment</span></a>
 			</li>
 
 			<li>
-				<a href="<?= URLROOT ?>students/attendance">
+				<a href="<?= URLROOT ?>staffs/attendance">
 					<span class="las la-receipt"></span>
 					<span>Attendance List</span></a>
 			</li>
 
-			<li>
-				<a href="<?= URLROOT ?>students/result">
-					<span class="las la-user-circle"></span>
-					<span>Results</span></a>
-			</li>
 
 			<li>
-				<a href="">
+				<a href="<?= URLROOT ?>staffs/exams">
 					<span class="las la-user-circle"></span>
 					<span>Exams</span></a>
 			</li>
