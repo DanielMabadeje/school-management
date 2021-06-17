@@ -48,7 +48,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?= URLROOT ?>/admins/addExam">Add Exams</a>
-                        <a class="dropdown-item" href="#">View Exams</a>
+                        <a class="dropdown-item" href="<?= URLROOT ?>/admins/getExam">View Exams</a>
                         <div class="dropdown-divider"></div>
                         <!-- <a class="dropdown-item" href="#">Something else here</a> -->
                     </div>

@@ -78,6 +78,10 @@ class Admins extends Controller
         }
     }
 
+    public function getExam()
+    {
+        $this->view('admin/viewExams.php');
+    }
     public function studentView()
     {
         # code...
