@@ -28,13 +28,17 @@
                                         <tbody>
 
                                             
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>Student</td>
-                                                    <td></td>
-                                                    <td><?= date('Y') ?></td>
-                                                </tr>
+                                        <?php foreach ($data['students'] as $student) : ?>
+                                    <tr>
+                                        <td><?= $student->name ?></td>
+                                        <td><?= $student->reg_no ?></td>
+                                        <td>Student</td>
+                                        <td><?= $student->department ?></td>
+                                        <td><?= date('Y') ?></td>
+                                    </tr>
+
+                                <?php endforeach; ?>
+
 
                                             
 
