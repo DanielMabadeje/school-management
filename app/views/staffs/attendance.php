@@ -13,6 +13,12 @@
                     <div class="mt-5 pt-5">
                         <div class="card">
                             <div class="card-body">
+
+                            <div class="col-md-12">
+                                <div class="col-md-4 ml-auto text-right">
+                                    <a href="" class="btn btn-primary ml-auto">Add Attendance</a>
+                                </div>
+                            </div>
                                 <div class="card-title mb-0">Students</div>
                                 <div class="table-responsive">
                                     <table class="table text-left">
