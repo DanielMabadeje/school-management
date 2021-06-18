@@ -28,7 +28,7 @@ class Staffs extends Controller
     {
 
         // $this->checkIfStudentIsLoggedIn();
-        // $user = $this->getProfile($_SESSION['user_id']);
+        $user = $this->getProfile($_SESSION['user_id']);
         $students = $this->studentModel->getStudentsByDepartment($user->faculty_id);
         // var_dump($students);
         // die;
@@ -38,5 +38,23 @@ class Staffs extends Controller
     public function attendance($course_id = null)
     {
         $this->view('staffs/attendance');
+    }
+
+    public function getProfile($user_id)
+    {
+        $this->checkIfStaffIsLoggedIn();
+        $data = $this->staffModel->getStaffById($user_id);
+        return $data;
+    }
+
+     private function checkIfStaffIsLoggedIn(){
+        if (isLoggedIn()) {
+
+            if($_SESSION['membership_group'] !== 'staff') {
+                redirect('/');
+            }
+        }else{
+            redirect('/');
+        }
     }
 }
