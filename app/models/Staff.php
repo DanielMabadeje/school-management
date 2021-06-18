@@ -26,4 +26,12 @@ class Staff
             # code...
         }
     }
+
+    public function getStaffById($user_id)
+    {
+        $this->db->query('SELECT * FROM staffs WHERR user_id=:user_id');
+        $this->db->bind(':user_id', $user_id);
+
+        return $this->db->single();
+    }
 }

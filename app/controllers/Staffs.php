@@ -29,11 +29,11 @@ class Staffs extends Controller
 
         // $this->checkIfStudentIsLoggedIn();
         // $user = $this->getProfile($_SESSION['user_id']);
-        $students = $this->studentModel->getStudentsByFaculty($user->faculty_id);
+        $students = $this->studentModel->getStudentsByDepartment($user->faculty_id);
         // var_dump($students);
         // die;
         $data['students'] = $students;
-        $this->view('students/students', $data);
+        $this->view('staffs/students', $data);
     }
     public function attendance($course_id = null)
     {
