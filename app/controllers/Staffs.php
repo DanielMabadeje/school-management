@@ -14,6 +14,8 @@ class Staffs extends Controller
         }
         $this->userModel = $this->model('User');
         $this->studentModel = $this->model('Student');
+        $this->staffModel = $this->model('Staff');
+        $this->examModel = $this->model('Exam');
     }
 
     public function index()
@@ -35,6 +37,6 @@ class Staffs extends Controller
     }
     public function attendance($course_id = null)
     {
-        # code...
+        $this->view('students/students', $data);
     }
 }
