@@ -29,7 +29,7 @@ class Staffs extends Controller
 
         // $this->checkIfStudentIsLoggedIn();
         $user = $this->getProfile($_SESSION['user_id']);
-        $students = $this->studentModel->getStudentsByDepartment($user->faculty_id);
+        $students = $this->studentModel->getStudentsByDepartment($user->department_id);
         // var_dump($students);
         // die;
         $data['students'] = $students;
