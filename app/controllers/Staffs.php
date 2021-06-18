@@ -47,6 +47,15 @@ class Staffs extends Controller
         return $data;
     }
 
+    public function addAttendance(Type $var = null)
+    {
+        if ($_SERVER['REQUEST_METHOD']=="POST") {
+            # code...
+        } else {
+            $this->view('staffs/addattendance');
+        }
+    }
+
      private function checkIfStaffIsLoggedIn(){
         if (isLoggedIn()) {
 
