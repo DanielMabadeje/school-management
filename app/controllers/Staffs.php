@@ -37,6 +37,6 @@ class Staffs extends Controller
     }
     public function attendance($course_id = null)
     {
-        $this->view('students/students', $data);
+        $this->view('staffs/attendance');
     }
 }
