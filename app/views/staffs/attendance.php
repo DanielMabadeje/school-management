@@ -4,7 +4,51 @@
     <link rel="stylesheet" href="<?= URLROOT ?>/css/calendar.css">
 
     <main>
+        <section>
+            <div class="attendance">
+                <h2 class="display-4">Attendance List</h2>
 
+
+                <section class="attendance">
+                    <div class="mt-5 pt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title mb-0">Students</div>
+                                <div class="table-responsive">
+                                    <table class="table text-left">
+                                        <thead>
+                                            <tr class="bg-light text-dark">
+                                                <th> Name </th>
+                                                <th> Reg No </th>
+                                                <th> Status </th>
+                                                <th> Course</th>
+                                                <th> Academic Year</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>Student</td>
+                                                    <td></td>
+                                                    <td><?= date('Y') ?></td>
+                                                </tr>
+
+                                            
+
+                                </div>
+
+
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
     </main>
 </div>
 
