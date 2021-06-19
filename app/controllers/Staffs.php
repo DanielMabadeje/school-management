@@ -53,9 +53,13 @@ class Staffs extends Controller
         # code...
     }
 
-    public function addTest(Type $var = null)
+    public function addTest()
     {
-        # code...
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            # code...
+        } else {
+            $this->view('staff/addtest');
+        }
     }
 
     public function getProfile($user_id)
