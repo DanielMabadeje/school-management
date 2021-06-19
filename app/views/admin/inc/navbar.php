@@ -50,7 +50,8 @@
                         <a class="dropdown-item" href="<?= URLROOT ?>/admins/addExam">Add Exams</a>
                         <a class="dropdown-item" href="<?= URLROOT ?>/admins/getExam">View Exams</a>
                         <div class="dropdown-divider"></div>
-                        <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+                        <a class="dropdown-item" href="<?= URLROOT ?>/admins/addTest">Add Test</a>
+                        <a class="dropdown-item" href="#">View Test</a>
                     </div>
                 </li>
 
