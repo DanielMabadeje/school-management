@@ -11,7 +11,7 @@
 
                 <div class="col-md-8 mx-auto">
                     <h2 class="display-4">Add Exam</h2>
-                    <form action="<?= URLROOT ?>staffs/addtest" method="post" class="mt-5">
+                    <form action="<?= URLROOT ?>staffs/addExam" method="post" class="mt-5">
                         <div class="form-group">
                             <label for="name">Name <sup>*</sup></label>
                             <input type="text" name="name" class="form-control form-control-lg" value="">

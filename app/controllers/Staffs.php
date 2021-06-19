@@ -83,6 +83,29 @@ class Staffs extends Controller
         }
     }
 
+    public function addExam()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $data = [
+                'name' => $_POST['name'],
+                'description' => $_POST['description'],
+                'course_id' => $_POST['course'],
+                'department_id' => $_POST['department_id'],
+                'date' => $_POST['date'],
+                'time' => $_POST['time'],
+            ];
+            if ($this->testModel->addTest($data)) {
+                redirect('staffs/test');
+            } else {
+                # code...
+            }
+        } else {
+
+            
+            $this->view('staffs/addtest');
+        }
+    }
+
     public function getProfile($user_id)
     {
         $this->checkIfStaffIsLoggedIn();
