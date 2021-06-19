@@ -16,6 +16,8 @@ class Admins extends Controller
         $this->studentModel = $this->model('Student');
         $this->staffModel = $this->model('Staff');
         $this->examModel = $this->model('Exam');
+        $this->attendanceModel = $this->model('Attendance');
+        $this->testModel = $this->model('Test');
     }
     public function Index()
     {

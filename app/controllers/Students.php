@@ -5,6 +5,8 @@ class Students extends Controller
     {
         $this->userModel = $this->model('User');
         $this->studentModel = $this->model('Student');
+        $this->attendanceModel = $this->model('Attendance');
+        $this->testModel = $this->model('Test');
     }
 
     public function Index()
@@ -216,13 +218,14 @@ class Students extends Controller
         $data = $this->studentModel->getStudentProfile($user_id);
         return $data;
     }
-    private function checkIfStudentIsLoggedIn(){
+    private function checkIfStudentIsLoggedIn()
+    {
         if (isLoggedIn()) {
 
-            if($_SESSION['membership_group'] !== 'student') {
+            if ($_SESSION['membership_group'] !== 'student') {
                 redirect('/');
             }
-        }else{
+        } else {
             redirect('/');
         }
     }
