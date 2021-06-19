@@ -42,7 +42,7 @@ class Staffs extends Controller
             $data['attendance'] = $this->attendanceModel->getAttendance();
             $this->view('staffs/attendance', $data);
         } else {
-            # code...
+            $this->view('staffs/attendanceview');
         }
     }
 

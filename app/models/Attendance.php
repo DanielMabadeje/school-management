@@ -41,4 +41,12 @@ class Attendance
 
         return $this->db->resultSet();
     }
+
+    public function getAttendanceList($attendance_id)
+    {
+        $this->db->query("SELECT * FROM attendance_list WHERE attendance_id=:attendance_id");
+        $this->db->bind(":attendance_id", $attendance_id);
+
+        return $this->db->resultSet();
+    }
 }
