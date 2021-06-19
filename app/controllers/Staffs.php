@@ -16,6 +16,7 @@ class Staffs extends Controller
         $this->studentModel = $this->model('Student');
         $this->staffModel = $this->model('Staff');
         $this->examModel = $this->model('Exam');
+        $this->attendanceModel = $this->model('Attendance');
     }
 
     public function index()
@@ -56,6 +57,12 @@ class Staffs extends Controller
                 'week' => $_POST['week']
 
             ];
+
+            if ($this->attendanceModel->addAttendance($data)) {
+                redirect('staffs/attendance');
+            } else {
+                # code...
+            }
         } else {
             $this->view('staffs/addattendance');
         }

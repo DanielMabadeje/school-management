@@ -19,7 +19,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Course <sup>*</sup></label>
-                            <input type="email" name="email" class="form-control form-control-lg " value="">
+                            <input type="text" name="course" class="form-control form-control-lg " value="">
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
