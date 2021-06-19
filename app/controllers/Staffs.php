@@ -50,7 +50,10 @@ class Staffs extends Controller
 
     public function test($test_id = null)
     {
-        # code...
+        if (is_null($test_id)) {
+            $this->view('staffs/');
+        } else {
+        }
     }
 
     public function addTest()
