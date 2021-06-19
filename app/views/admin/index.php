@@ -179,11 +179,12 @@
 
 
 
+                <!-- Tests -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
 
                         <div class="card-header">
-                            <h4>Users</h4>
+                            <h4>Tests</h4>
                         </div>
                         <div class="card-body p-0">
 
@@ -223,6 +224,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- end tests -->
             </div>
             <div class="col-md-3"></div>
         </section>
