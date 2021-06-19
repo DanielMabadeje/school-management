@@ -32,7 +32,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">Description <sup>*</sup></label>
-                                <input type="text" name="description" class="form-control form-control-lg <?= (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="">
+                                <!-- <input type="text" name="description" class="form-control form-control-lg <?= (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value=""> -->
+                                <textarea name="description" rows="10" cols="30" class="form-control form-control-lg">
+
+                            </textarea>
                                 <span class="invalid-feedback"></span>
                             </div>
                             <div class="form-group">
@@ -45,6 +48,18 @@
                                 <input type="text" name="department" class="form-control form-control-lg " value="">
                                 <span class="invalid-feedback"><?= $data['confirm_password_err']; ?></span>
                             </div>
+
+                            <div class="form-group">
+                            <label for="">Date <sup>*</sup></label>
+                            <input type="date" name="date" class="form-control form-control-lg ">
+                            <span class="invalid-feedback"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Time<sup>*</sup></label>
+                            <input type="time" name="time" class="form-control form-control-lg ">
+                            <span class="invalid-feedback"></span>
+                        </div>
 
 
                             <div class="form-group">
