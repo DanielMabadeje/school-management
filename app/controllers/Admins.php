@@ -31,6 +31,15 @@ class Admins extends Controller
         $this->view('admin/index', $data);
     }
 
+
+    public function addCourse()
+    {
+        if ($_SERVER['REQUEST_METHOD']) {
+            $data=[];
+        } else {
+            # code...
+        }
+    }
     public function addStudent()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
