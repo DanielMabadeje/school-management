@@ -33,13 +33,17 @@
                                         <tbody>
 
 
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td>Student</td>
-                                                <td></td>
-                                                <td><?= date('Y') ?></td>
-                                            </tr>
+                                            <?php foreach ($data['attendance'] as $attendance) : ?>
+
+                                                <tr>
+                                                    <td><?= $attendance->name ?></td>
+                                                    <td><?= $attendance->week ?></td>
+                                                    <!-- <td>Student</td> -->
+                                                    <td></td>
+                                                    <td><?= date('Y') ?></td>
+                                                </tr>
+                                            <?php endforeach; ?>
+
 
 
 
