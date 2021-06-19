@@ -14,8 +14,11 @@ class Attendance
     {
         $this->db = new Database;
     }
-    public function addAttendance(Type $var = null)
+    public function addAttendance($data)
     {
-        # code...
+        $this->db->query(
+            "INSERT INTO attendance
+            "
+        );
     }
 }
