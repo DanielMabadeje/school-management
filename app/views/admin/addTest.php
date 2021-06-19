@@ -74,3 +74,5 @@
 
     </div>
 </div>
+
+<?php require APPROOT . '/views/admin/inc/footer.php'; ?>
