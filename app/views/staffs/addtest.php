@@ -30,6 +30,11 @@
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
+                            <label for="email">Department<sup>*</sup></label>
+                            <input type="text" name="department_id" class="form-control form-control-lg " value="">
+                            <span class="invalid-feedback"></span>
+                        </div>
+                        <div class="form-group">
                             <label for="">Date <sup>*</sup></label>
                             <input type="date" name="date" class="form-control form-control-lg ">
                             <span class="invalid-feedback"></span>
