@@ -20,11 +20,11 @@
             <div class="card ">
 
                 <div class="card-header pt-0 pb-0 bg-other-faint">
-                    <h4>Add Exam</h4>
+                    <h4>Add Course</h4>
                 </div>
                 <div class="card-body p-0">
                     <div class="form p-5">
-                        <form action="<?= URLROOT ?>/admins/addexam" method="post">
+                        <form action="<?= URLROOT ?>/admins/addcourse" method="post">
                             <div class="form-group">
                                 <label for="name">Name <sup>*</sup></label>
                                 <input type="text" name="name" class="form-control form-control-lg" value="">
