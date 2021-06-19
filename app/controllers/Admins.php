@@ -114,6 +114,14 @@ class Admins extends Controller
         $data['exams'] = $this->getExams();
         $this->view('admin/viewExams', $data);
     }
+
+    public function getTest()
+    {
+
+        $data = [];
+        $data['tests'] = $this->getTests();
+        $this->view('admin/viewTests', $data);
+    }
     public function studentView()
     {
         # code...
