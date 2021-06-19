@@ -19,7 +19,7 @@
                                         <a href="<?= URLROOT ?>/staffs/addattendance" class="btn btn-primary ml-auto">Add Attendance</a>
                                     </div>
                                 </div>
-                                <div class="card-title mb-0">Students</div>
+                                <div class="card-title mb-0">Attendance</div>
                                 <div class="table-responsive">
                                     <table class="table text-left">
                                         <thead>
