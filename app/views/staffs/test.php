@@ -38,9 +38,7 @@
                                                 <tr>
                                                     <td><?= $test->name ?></td>
                                                     <td><?= $test->description ?></td>
-                                                    <td>Student</td>
-                                                    <td><?= $test->course ?></td>
-                                                    <!-- <td><?= date('Y') ?></td> -->
+                                                    <td><?= $test->course_id ?></td>
                                                     <td><?= $test->date ?></td>
                                                     <td><?= $test->time ?></td>
                                                     <td>
