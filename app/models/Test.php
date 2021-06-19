@@ -16,7 +16,6 @@ class Test
     }
     public function addTest($data)
     {
-        // var_dump($data);
 
         $this->db->query('INSERT INTO tests (name, description, course_id, department_id, date, time) VALUES(:name, :description, :course_id, :department_id, :date, :time)');
         $this->db->bind(':name', $data['name']);
