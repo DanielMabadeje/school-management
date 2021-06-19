@@ -30,4 +30,15 @@ class Attendance
             return false;
         }
     }
+
+    public function getAttendance($course_id = null)
+    {
+        if (is_null($course_id)) {
+            $this->db->query("SELECT * FROM attendance");
+        } else {
+            # code...
+        }
+
+        return $this->db->resultSet();
+    }
 }
