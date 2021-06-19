@@ -7,7 +7,7 @@
 
 
         <div class="header-side pt-5 mt-5">
-            <h1 class="display-4">Add Exams</h1>
+            <h1 class="display-4">Add Course</h1>
 
             <hr>
         </div>

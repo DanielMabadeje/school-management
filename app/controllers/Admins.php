@@ -34,10 +34,10 @@ class Admins extends Controller
 
     public function addCourse()
     {
-        if ($_SERVER['REQUEST_METHOD']) {
+        if ($_SERVER['REQUEST_METHOD']=="POST") {
             $data=[];
         } else {
-            # code...
+            $this->view('admin/addCourse');
         }
     }
     public function addStudent()
