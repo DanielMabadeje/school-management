@@ -83,6 +83,11 @@ class Staffs extends Controller
         }
     }
 
+    public function exams()
+    {
+        # code...
+    }
+
     public function addExam()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -94,8 +99,8 @@ class Staffs extends Controller
                 'date' => $_POST['date'],
                 'time' => $_POST['time'],
             ];
-            if ($this->testModel->addTest($data)) {
-                redirect('staffs/test');
+            if ($this->examModel->addExam($data)) {
+                redirect('staffs/exams');
             } else {
                 # code...
             }
