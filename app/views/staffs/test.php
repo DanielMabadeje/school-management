@@ -16,7 +16,7 @@
 
                                 <div class="col-md-12">
                                     <div class="col-md-4 ml-auto text-right">
-                                        <a href="<?= URLROOT ?>/staffs/addattendance" class="btn btn-primary ml-auto">Add Test</a>
+                                        <a href="<?= URLROOT ?>/staffs/addtest" class="btn btn-primary ml-auto">Add Test</a>
                                     </div>
                                 </div>
                                 <div class="card-title mb-0">Tests</div>

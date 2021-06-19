@@ -65,7 +65,7 @@ class Staffs extends Controller
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             # code...
         } else {
-            $this->view('staff/addtest');
+            $this->view('staffs/addtest');
         }
     }
 
