@@ -33,7 +33,7 @@ class Test
         }
     }
 
-    public function getExams()
+    public function getTests()
     {
         $this->db->query('SELECT * FROM tests');
         return $this->db->resultSet();
