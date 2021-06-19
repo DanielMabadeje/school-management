@@ -51,7 +51,7 @@
                         <a class="dropdown-item" href="<?= URLROOT ?>/admins/getExam">View Exams</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?= URLROOT ?>/admins/addTest">Add Test</a>
-                        <a class="dropdown-item" href="<?= URLROOT ?>/admins/viewTest">View Test</a>
+                        <a class="dropdown-item" href="<?= URLROOT ?>/admins/getTest">View Test</a>
                     </div>
                 </li>
 
