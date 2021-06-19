@@ -28,6 +28,7 @@
                                                 <th> Week </th>
                                                 <th> Course</th>
                                                 <th> Created</th>
+                                                <th> Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -41,6 +42,13 @@
                                                     <!-- <td>Student</td> -->
                                                     <td></td>
                                                     <td><?= date('Y') ?></td>
+                                                    <td>
+                                                        <div class="row">
+                                                            <a href="" class="btn btn-primary">Edit</a>
+                                                            <a href="" class="btn btn-danger">Delete</a>
+                                                        </div>
+
+                                                    </td>
                                                 </tr>
                                             <?php endforeach; ?>
 

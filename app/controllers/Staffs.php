@@ -38,9 +38,12 @@ class Staffs extends Controller
     }
     public function attendance($course_id = null)
     {
-
-        $data['attendance'] = $this->attendanceModel->getAttendance();
-        $this->view('staffs/attendance', $data);
+        if (is_null($course_id)) {
+            $data['attendance'] = $this->attendanceModel->getAttendance();
+            $this->view('staffs/attendance', $data);
+        } else {
+            # code...
+        }
     }
 
     public function getProfile($user_id)
