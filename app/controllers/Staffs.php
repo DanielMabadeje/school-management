@@ -113,7 +113,7 @@ class Staffs extends Controller
         } else {
 
             
-            $this->view('staffs/addtest');
+            $this->view('staffs/addExam');
         }
     }
 
