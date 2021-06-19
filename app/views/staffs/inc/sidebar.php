@@ -41,6 +41,12 @@
 
 
 			<li>
+				<a href="<?= URLROOT ?>staffs/test">
+					<span class="las la-user-circle"></span>
+					<span>Tests</span></a>
+			</li>
+
+			<li>
 				<a href="<?= URLROOT ?>staffs/exams">
 					<span class="las la-user-circle"></span>
 					<span>Exams</span></a>
