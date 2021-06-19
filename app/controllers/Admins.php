@@ -52,14 +52,15 @@ class Admins extends Controller
                 'time' => $_POST['time'],
             ];
             if ($this->testModel->addTest($data)) {
-                redirect('staffs/test');
+                flash('add_exam_success', 'Tests Added successfully');
+                redirect('admins');
             } else {
                 # code...
             }
         } else {
 
             
-            $this->view('staffs/addtest');
+            $this->view('admin/addTest');
         }
     }
 
