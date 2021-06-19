@@ -83,9 +83,15 @@ class Staffs extends Controller
         }
     }
 
-    public function exams()
+    public function exams( $exam_id=null)
     {
-        # code...
+        if (is_null($exam_id)) {
+
+            $data['exam'] = $this->examModel->getExams();
+            $this->view('staffs/exam', $data);
+        } else {
+            $this->view('staffs/testview');
+        }
     }
 
     public function addExam()

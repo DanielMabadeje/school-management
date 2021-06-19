@@ -16,7 +16,7 @@
 
                                 <div class="col-md-12">
                                     <div class="col-md-4 ml-auto text-right">
-                                        <a href="<?= URLROOT ?>/staffs/addtest" class="btn btn-primary ml-auto">Add Test</a>
+                                        <a href="<?= URLROOT ?>/staffs/addExam" class="btn btn-primary ml-auto">Add Exam</a>
                                     </div>
                                 </div>
                                 <div class="card-title mb-0">Tests</div>
@@ -34,7 +34,7 @@
                                         </thead>
                                         <tbody>
 
-                                            <?php foreach ($data['test'] as $test) : ?>
+                                            <?php foreach ($data['exam'] as $test) : ?>
                                                 <tr>
                                                     <td><?= $test->name ?></td>
                                                     <td><?= $test->description ?></td>
