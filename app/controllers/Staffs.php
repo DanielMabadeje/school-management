@@ -47,22 +47,28 @@ class Staffs extends Controller
         return $data;
     }
 
-    public function addAttendance(Type $var = null)
+    public function addAttendance()
     {
-        if ($_SERVER['REQUEST_METHOD']=="POST") {
-            # code...
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $data = [
+                'name' => $_POST['name'],
+                'course_id' => $_POST['course'],
+                'week' => $_POST['week']
+
+            ];
         } else {
             $this->view('staffs/addattendance');
         }
     }
 
-     private function checkIfStaffIsLoggedIn(){
+    private function checkIfStaffIsLoggedIn()
+    {
         if (isLoggedIn()) {
 
-            if($_SESSION['membership_group'] !== 'staff') {
+            if ($_SESSION['membership_group'] !== 'staff') {
                 redirect('/');
             }
-        }else{
+        } else {
             redirect('/');
         }
     }
