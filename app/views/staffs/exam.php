@@ -6,7 +6,7 @@
     <main>
         <section>
             <div class="attendance">
-                <h2 class="display-4">Tests</h2>
+                <h2 class="display-4">Exams</h2>
 
 
                 <section class="attendance">
