@@ -18,13 +18,26 @@
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
+                            <label for="name">Description <sup>*</sup></label>
+                            <textarea name="description" rows="10" cols="30" class="form-control form-control-lg">
+
+                            </textarea>
+                            <span class="invalid-feedback"></span>
+                        </div>
+                        <div class="form-group">
                             <label for="email">Course <sup>*</sup></label>
                             <input type="text" name="course" class="form-control form-control-lg " value="">
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
-                            <label for="">Week <sup>*</sup></label>
-                            <input type="text" name="week" class="form-control form-control-lg " value="">
+                            <label for="">Date <sup>*</sup></label>
+                            <input type="date" name="date" class="form-control form-control-lg ">
+                            <span class="invalid-feedback"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Time<sup>*</sup></label>
+                            <input type="time" name="time" class="form-control form-control-lg ">
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
