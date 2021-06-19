@@ -25,14 +25,17 @@
                                         <thead>
                                             <tr class="bg-light text-dark">
                                                 <th> Name </th>
-                                                <th> Week </th>
+                                                <th> Description</th>
                                                 <th> Course</th>
-                                                <th> Created</th>
+                                                <th> Date</th>
+                                                <th> Time</th>
                                                 <th> Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
+                                            <?php foreach ($data['test'] as $test) : ?>
+                                            <?php endforeach; ?>
 
 
 

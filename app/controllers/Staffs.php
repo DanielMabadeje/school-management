@@ -77,7 +77,9 @@ class Staffs extends Controller
                 # code...
             }
         } else {
-            $this->view('staffs/addtest');
+
+            $data['test'] = $this->testModel->getTests();
+            $this->view('staffs/addtest', $data);
         }
     }
 
