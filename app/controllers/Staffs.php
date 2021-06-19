@@ -17,6 +17,7 @@ class Staffs extends Controller
         $this->staffModel = $this->model('Staff');
         $this->examModel = $this->model('Exam');
         $this->attendanceModel = $this->model('Attendance');
+        $this->testModel = $this->model('Test');
     }
 
     public function index()
@@ -51,8 +52,11 @@ class Staffs extends Controller
     public function test($test_id = null)
     {
         if (is_null($test_id)) {
-            $this->view('staffs/');
+
+            $this->testModel->getTests();
+            $this->view('staffs/test');
         } else {
+            $this->view('staffs/testview');
         }
     }
 
