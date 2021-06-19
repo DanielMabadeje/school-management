@@ -195,29 +195,17 @@
                                     <thead>
                                         <tr>
                                             <th> Name </th>
-                                            <th> Registered </th>
+                                            <th> Date </th>
                                         </tr>
                                     </thead>
                                     <tbody id="order">
-                                        <tr>
-                                            <td>Paypal</td>
-                                            <td> 14,000</td>
-                                        </tr>
-                                        <tr>
+                                    <?php foreach ($data['tests'] as $test) : ?>
+                                            <tr>
+                                                <td><?= $test->name; ?></td>
+                                                <td> <?= $test->date; ?></td>
+                                            </tr>
 
-                                            <td>Visa</td>
-                                            <td>41,160</td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>Paypal</td>
-                                            <td>12,603</td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>Paypal</td>
-                                            <td>91,231</td>
-                                        </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
