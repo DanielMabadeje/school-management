@@ -71,6 +71,11 @@ class Staffs extends Controller
                 'date' => $_POST['date'],
                 'time' => $_POST['time'],
             ];
+            if ($this->testModel->addTest($data)) {
+                redirect('staffs/test');
+            } else {
+                # code...
+            }
         } else {
             $this->view('staffs/addtest');
         }
