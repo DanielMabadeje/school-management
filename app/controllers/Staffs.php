@@ -53,8 +53,8 @@ class Staffs extends Controller
     {
         if (is_null($test_id)) {
 
-            $this->testModel->getTests();
-            $this->view('staffs/test');
+            $data['test'] = $this->testModel->getTests();
+            $this->view('staffs/test', $data);
         } else {
             $this->view('staffs/testview');
         }
@@ -78,8 +78,8 @@ class Staffs extends Controller
             }
         } else {
 
-            $data['test'] = $this->testModel->getTests();
-            $this->view('staffs/addtest', $data);
+            
+            $this->view('staffs/addtest');
         }
     }
 
