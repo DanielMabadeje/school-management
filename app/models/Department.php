@@ -17,6 +17,7 @@ class Department
 
     public function getDepartment()
     {
-        # code...
+        $this->db->query("SELECT * FROM departments");
+        return $this->db->resultSet();
     }
 }

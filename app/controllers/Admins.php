@@ -44,7 +44,8 @@ class Admins extends Controller
                 'department' => $_POST['department_id'],
             ];
         } else {
-            $this->view('admin/addCourse');
+            $data['departments'] = $this->getdepartments();
+            $this->view('admin/addCourse', $data);
         }
     }
     public function addStudent()
@@ -102,6 +103,7 @@ class Admins extends Controller
             }
         } else {
             $data['courses'] = $this->getCourses();
+            $data['departments'] = $this->getdepartments();
             $this->view('admin/addExam', $data);
         }
     }
