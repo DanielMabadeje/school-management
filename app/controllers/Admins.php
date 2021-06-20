@@ -41,8 +41,14 @@ class Admins extends Controller
                 'name' => $_POST['name'],
                 'description' => $_POST['description'],
                 'level' => $_POST['level'],
-                'department' => $_POST['department_id'],
+                'department' => $_POST['department'],
             ];
+
+            if ($this->courseModel->addCourse($data)) {
+                redirect('/');
+            } else {
+                echo "alert";
+            }
         } else {
             $data['departments'] = $this->getdepartments();
             $this->view('admin/addCourse', $data);
