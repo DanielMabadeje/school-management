@@ -48,6 +48,8 @@ class Staffs extends Controller
 
             $data['attendance_id'] = $attendance_id;
             $data['attendance'] = $this->attendanceModel->getAttendanceList($attendance_id);
+            $data['current_attendance'] = $this->attendanceModel->getAttendanceById($attendance_id);
+            $data['current_attendance']->course_name = $this->getCourseById($data['current_attendance']->course_id);
             $data['students'] = $this->getStudents();
             $this->view('staffs/attendanceview', $data);
         }
@@ -209,6 +211,11 @@ class Staffs extends Controller
     private function getStudents($limit = 10)
     {
         $data = $this->studentModel->getAllStudents();
+        return $data;
+    }
+    public function getCourseById($id)
+    {
+        $data = $this->courseModel->getCourseById($id);
         return $data;
     }
 }

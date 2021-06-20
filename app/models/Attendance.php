@@ -62,4 +62,12 @@ class Attendance
             return false;
         }
     }
+
+    public function getAttendanceById($id)
+    {
+        $this->db->query("SELECT * FROM attendance WHERE id=:attendance_id");
+        $this->db->bind(":attendance_id", $id);
+
+        return $this->db->single();
+    }
 }

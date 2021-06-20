@@ -67,7 +67,7 @@
                                             <tr class="bg-light text-dark">
                                                 <th> Name </th>
                                                 <th> Reg No</th>
-                                                <th> Week </th>
+                                                <!-- <th> Week </th> -->
                                                 <th> Course</th>
                                                 <th> Created</th>
                                                 <th> Action</th>
@@ -76,7 +76,24 @@
                                         <tbody>
 
 
+                                            <?php foreach ($data['attendance'] as $attendance) : ?>
 
+                                                <tr>
+                                                    <!-- <td><?= $attendance->name ?></td> -->
+                                                    <td></td>
+                                                    <td><?= $attendance->student_reg_no ?></td>
+                                                    <!-- <td>Student</td> -->
+                                                    <td><?= $data['current_attendance']->course_name->name ?></td>
+                                                    <td><?= $attendance->created_at ?></td>
+                                                    <td>
+                                                        <!-- <div class="row"> -->
+                                                        <a href="<?= URLROOT; ?>/staffs/attendance/<?= $attendance->id ?>" class="btn btn-primary">Edit</a>
+                                                        <a href="<?= $attendance->id ?>" class="btn btn-danger">Delete</a>
+                                                        <!-- </div> -->
+
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
 
 
 
