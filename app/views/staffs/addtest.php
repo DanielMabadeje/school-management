@@ -58,7 +58,7 @@
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn" value="Add Test">
+                            <input type="submit" class="btn bg-other text-white" value="Add Test">
                         </div>
                     </form>
                 </div>
