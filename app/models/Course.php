@@ -14,4 +14,10 @@ class Course
     {
         $this->db = new Database;
     }
+
+    public function getCourses()
+    {
+        $this->db->query("SELECT * FROM courses");
+        return $this->db->resultSet();
+    }
 }
