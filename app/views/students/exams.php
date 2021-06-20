@@ -1,6 +1,6 @@
 <?php require APPROOT . '/views/students/inc/header.php'; ?>
 <div class="main-content">
-    <?php require APPROOT . '/views/students/inc/navbar.php'; ?>
+    <?php require APPROOT . '/views/students/inc/dashnav.php'; ?>
     <link rel="stylesheet" href="<?= URLROOT ?>/css/calendar.css">
 
     <main>

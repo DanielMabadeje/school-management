@@ -33,6 +33,17 @@ class Students extends Controller
     }
 
 
+    public function exams($exam_id = null)
+    {
+        if (is_null($exam_id)) {
+
+            $data['exam'] = $this->examModel->getExams();
+            $this->view('students/exams', $data);
+        } else {
+            $this->view('staffs/testview');
+        }
+    }
+
     public function students()
     {
 
