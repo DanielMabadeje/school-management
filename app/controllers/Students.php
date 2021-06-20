@@ -40,7 +40,7 @@ class Students extends Controller
             $data['exam'] = $this->examModel->getExams();
             $this->view('students/exams', $data);
         } else {
-            $this->view('staffs/testview');
+            $this->view('students/testview');
         }
     }
 
@@ -49,9 +49,9 @@ class Students extends Controller
         if (is_null($test_id)) {
 
             $data['test'] = $this->testModel->getTests();
-            $this->view('staffs/test', $data);
+            $this->view('students/test', $data);
         } else {
-            $this->view('staffs/testview');
+            $this->view('students/testview');
         }
     }
 
