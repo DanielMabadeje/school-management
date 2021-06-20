@@ -40,7 +40,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="password">Course: <sup>*</sup></label>
-                                <input type="text" name="course" class="form-control form-control-lg " value="">
+
+                                <select name="course" class="form-control form-control-lg ">
+
+                                    <?php foreach ($data['courses'] as $course) : ?>
+                                        <option value="<?= $course->id ?>"><?= $course->name ?></option>
+                                    <?php endforeach; ?>
+                                </select>
                                 <span class="invalid-feedback"><?= $data['password_err']; ?></span>
                             </div>
                             <div class="form-group">
@@ -50,16 +56,16 @@
                             </div>
 
                             <div class="form-group">
-                            <label for="">Date <sup>*</sup></label>
-                            <input type="date" name="date" class="form-control form-control-lg ">
-                            <span class="invalid-feedback"></span>
-                        </div>
+                                <label for="">Date <sup>*</sup></label>
+                                <input type="date" name="date" class="form-control form-control-lg ">
+                                <span class="invalid-feedback"></span>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="">Time<sup>*</sup></label>
-                            <input type="time" name="time" class="form-control form-control-lg ">
-                            <span class="invalid-feedback"></span>
-                        </div>
+                            <div class="form-group">
+                                <label for="">Time<sup>*</sup></label>
+                                <input type="time" name="time" class="form-control form-control-lg ">
+                                <span class="invalid-feedback"></span>
+                            </div>
                             <div class="form-group">
                                 <input type="submit" value="Add Test" class="btn btn-primary btn-block col-6 p-3">
                             </div>
