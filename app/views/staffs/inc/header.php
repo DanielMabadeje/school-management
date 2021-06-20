@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="<?= URLROOT ?>/css/staff/dashboard.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/accordion.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/layout.css">
 
 
 </head>
