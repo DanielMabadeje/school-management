@@ -44,7 +44,7 @@ class Students extends Controller
         }
     }
 
-    public function tests($test_id)
+    public function tests($test_id = null)
     {
         if (is_null($test_id)) {
 
