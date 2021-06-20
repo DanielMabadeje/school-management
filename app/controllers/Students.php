@@ -44,6 +44,17 @@ class Students extends Controller
         }
     }
 
+    public function tests($test_id)
+    {
+        if (is_null($test_id)) {
+
+            $data['test'] = $this->testModel->getTests();
+            $this->view('staffs/test', $data);
+        } else {
+            $this->view('staffs/testview');
+        }
+    }
+
     public function students()
     {
 

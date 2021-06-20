@@ -46,7 +46,13 @@
 			</li>
 
 			<li>
-				<a href="">
+				<a href="<?= URLROOT ?>students/exams">
+					<span class="las la-user-circle"></span>
+					<span>Exams</span></a>
+			</li>
+
+			<li>
+				<a href="<?= URLROOT ?>students/tests">
 					<span class="las la-user-circle"></span>
 					<span>Exams</span></a>
 			</li>
