@@ -51,7 +51,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Department: <sup>*</sup></label>
-                                <input type="text" name="department" class="form-control form-control-lg " value="">
+                                <!-- <input type="text" name="department" class="form-control form-control-lg " value=""> -->
+                                <select name="department" class="form-control form-control-lg ">
+
+                                    <?php foreach ($data['departments'] as $department) : ?>
+                                        <option value="<?= $department->id ?>"><?= $department->name ?></option>
+                                    <?php endforeach; ?>
+                                </select>
                                 <span class="invalid-feedback"><?= $data['confirm_password_err']; ?></span>
                             </div>
 
