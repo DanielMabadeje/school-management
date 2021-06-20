@@ -94,7 +94,8 @@ class Admins extends Controller
                 # code...
             }
         } else {
-            $this->view('admin/addExam');
+            $data['courses'] = $this->getCourses();
+            $this->view('admin/addExam', $data);
         }
     }
 
