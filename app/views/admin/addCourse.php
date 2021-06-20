@@ -48,6 +48,7 @@
                                 <!-- <input type="text" name="department" class="form-control form-control-lg " value=""> -->
                                 <select name="department" class="form-control form-control-lg ">
 
+                                    <option value="*">All</option>
                                     <?php foreach ($data['departments'] as $department) : ?>
                                         <option value="<?= $department->id ?>"><?= $department->name ?></option>
                                     <?php endforeach; ?>
