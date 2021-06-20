@@ -1,6 +1,6 @@
 <?php require APPROOT . '/views/students/inc/header.php'; ?>
 <div class="main-content">
-    <?php require APPROOT . '/views/students/inc/navbar.php'; ?>
+    <?php require APPROOT . '/views/students/inc/dashnav.php'; ?>
     <link rel="stylesheet" href="<?= URLROOT ?>/css/calendar.css">
 
     <main>
@@ -44,8 +44,8 @@
                                                     <td><?= date('Y') ?></td>
                                                     <td>
                                                         <!-- <div class="row"> -->
-                                                        <a href="<?= URLROOT; ?>/staffs/attendance/<?= $attendance->id ?>" class="btn btn-primary">Edit</a>
-                                                        <a href="<?= $attendance->id ?>" class="btn btn-danger">Delete</a>
+                                                        <a href="<?= URLROOT; ?>/staffs/attendance/<?= $attendance->id ?>" class="btn btn-primary">View</a>
+
                                                         <!-- </div> -->
 
                                                     </td>

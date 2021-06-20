@@ -46,11 +46,24 @@ class Students extends Controller
     }
 
 
-    public function attendance($course_id = null)
+    public function attendance($attendance_id = null)
     {
         $this->checkIfStudentIsLoggedIn();
         $user = $this->getProfile($_SESSION['user_id']);
-        $courses = $this->studentModel->getCourses($user->level);
+
+        if (is_null($attendance_id)) {
+            $data['attendance'] = $this->attendanceModel->getAttendance();
+
+            $this->view('students/attendance', $data);
+        } else {
+
+            $data['attendance_id'] = $attendance_id;
+            $data['attendance'] = $this->attendanceModel->getAttendanceList($attendance_id);
+            $data['current_attendance'] = $this->attendanceModel->getAttendanceById($attendance_id);
+            $data['current_attendance']->course_name = $this->getCourseById($data['current_attendance']->course_id);
+            $data['students'] = $this->getStudents();
+            $this->view('students/attendance', $data);
+        }
     }
 
 
