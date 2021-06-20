@@ -18,6 +18,7 @@ class Admins extends Controller
         $this->examModel = $this->model('Exam');
         $this->attendanceModel = $this->model('Attendance');
         $this->testModel = $this->model('Test');
+        $this->courseModel = $this->model('Course');
     }
     public function Index()
     {
@@ -34,8 +35,8 @@ class Admins extends Controller
 
     public function addCourse()
     {
-        if ($_SERVER['REQUEST_METHOD']=="POST") {
-            $data=[];
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $data = [];
         } else {
             $this->view('admin/addCourse');
         }
@@ -68,8 +69,9 @@ class Admins extends Controller
             }
         } else {
 
-            
-            $this->view('admin/addTest');
+
+            $data['courses'] = $this->getCourses();
+            $this->view('admin/addTest', $data);
         }
     }
 
@@ -177,6 +179,12 @@ class Admins extends Controller
     private function getTests()
     {
         $data = $this->testModel->getTests();
+        return $data;
+    }
+
+    private function getCourses()
+    {
+        $data = $this->courseModel->getCourses();
         return $data;
     }
 }
