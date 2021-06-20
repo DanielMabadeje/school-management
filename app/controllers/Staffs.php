@@ -81,7 +81,9 @@ class Staffs extends Controller
         } else {
 
 
-            $this->view('staffs/addtest');
+            $data['courses'] = $this->getCourses();
+            $data['departments'] = $this->getdepartments();
+            $this->view('staffs/addtest', $data);
         }
     }
 
@@ -114,8 +116,9 @@ class Staffs extends Controller
             }
         } else {
 
-
-            $this->view('staffs/addExam');
+            $data['courses'] = $this->getCourses();
+            $data['departments'] = $this->getdepartments();
+            $this->view('staffs/addExam', $data);
         }
     }
 
