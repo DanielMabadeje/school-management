@@ -18,6 +18,8 @@ class Staffs extends Controller
         $this->examModel = $this->model('Exam');
         $this->attendanceModel = $this->model('Attendance');
         $this->testModel = $this->model('Test');
+        $this->courseModel = $this->model('Course');
+        $this->departmentModel = $this->model('Department');
     }
 
     public function index()
@@ -78,12 +80,12 @@ class Staffs extends Controller
             }
         } else {
 
-            
+
             $this->view('staffs/addtest');
         }
     }
 
-    public function exams( $exam_id=null)
+    public function exams($exam_id = null)
     {
         if (is_null($exam_id)) {
 
@@ -112,7 +114,7 @@ class Staffs extends Controller
             }
         } else {
 
-            
+
             $this->view('staffs/addExam');
         }
     }
@@ -154,5 +156,26 @@ class Staffs extends Controller
         } else {
             redirect('/');
         }
+    }
+    private function getExams()
+    {
+        $data = $this->examModel->getExams();
+        return $data;
+    }
+    private function getTests()
+    {
+        $data = $this->testModel->getTests();
+        return $data;
+    }
+
+    private function getCourses()
+    {
+        $data = $this->courseModel->getCourses();
+        return $data;
+    }
+    private function getDepartments()
+    {
+        $data = $this->departmentModel->getDepartment();
+        return $data;
     }
 }
