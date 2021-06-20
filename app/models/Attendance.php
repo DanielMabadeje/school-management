@@ -52,7 +52,7 @@ class Attendance
 
     public function addStudentToAttendance($attendance_id, $reg_no)
     {
-        $this->db->query("INSERT INTO attendance_list (attendance_id, reg_no) VALUES (:attendance_id, :reg_no)");
+        $this->db->query("INSERT INTO attendance_list (attendance_id, student_reg_no) VALUES (:attendance_id, :reg_no)");
         $this->db->bind(":attendance_id", $attendance_id);
         $this->db->bind(":reg_no", $reg_no);
 

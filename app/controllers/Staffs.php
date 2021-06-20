@@ -46,6 +46,7 @@ class Staffs extends Controller
             $this->view('staffs/attendance', $data);
         } else {
 
+            $data['attendance_id'] = $attendance_id;
             $data['attendance'] = $this->attendanceModel->getAttendanceList($attendance_id);
             $data['students'] = $this->getStudents();
             $this->view('staffs/attendanceview', $data);
@@ -155,11 +156,16 @@ class Staffs extends Controller
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $data = [
+                'attendance_id' => $_POST['attendance_id'],
                 "attendanceStudent" => $_POST['attendanceStudent']
             ];
 
             foreach ($data['attendanceStudent'] as $key => $value) {
-                # code...
+                if ($this->attendanceModel->addStudentToAttendance($data['attendance_id'], $value)) {
+                    continue;
+                } else {
+                    break;
+                }
             }
 
             redirect('staffs/attendance');

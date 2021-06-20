@@ -20,11 +20,13 @@
                         <div class="modal-body">
                             <!-- <p>Some text in the modal.</p> -->
 
-                            <form action="" method="post">
+                            <form action="<?= URLROOT ?>/staffs/addStudentToAttendance" method="post">
 
+
+                                <input type="hidden" name="attendance_id" value="<?= $data['attendance_id'] ?>">
                                 <?php foreach ($data['students'] as $student) : ?>
                                     <div class="checkbox pt-md-4">
-                                        <label><input type="checkbox" name="attendanceStudent[]" value=""> <?= $student->name ?></label>
+                                        <label><input type="checkbox" name="attendanceStudent[]" value="<?= $student->reg_no ?>"> <?= $student->name ?></label>
                                     </div>
                                 <?php endforeach; ?>
                                 <input type="submit" value="Submit" class="form-control form-control-lg btn bg-other text-white">
