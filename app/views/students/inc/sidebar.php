@@ -54,7 +54,7 @@
 			<li>
 				<a href="<?= URLROOT ?>students/tests">
 					<span class="las la-user-circle"></span>
-					<span>Exams</span></a>
+					<span>Tests</span></a>
 			</li>
 
 			<li class="logout bg-danger pt-3 pb-3">

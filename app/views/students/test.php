@@ -15,9 +15,7 @@
                             <div class="card-body">
 
                                 <div class="col-md-12">
-                                    <div class="col-md-4 ml-auto text-right">
-                                        <a href="<?= URLROOT ?>/staffs/addtest" class="btn bg-other text-white ml-auto">Add Test</a>
-                                    </div>
+
                                 </div>
                                 <div class="card-title mb-0">Tests</div>
                                 <div class="table-responsive">
