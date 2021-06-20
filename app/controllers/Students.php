@@ -62,7 +62,7 @@ class Students extends Controller
             $data['current_attendance'] = $this->attendanceModel->getAttendanceById($attendance_id);
             $data['current_attendance']->course_name = $this->getCourseById($data['current_attendance']->course_id);
             $data['students'] = $this->getStudents();
-            $this->view('students/attendance', $data);
+            $this->view('students/attendanceview', $data);
         }
     }
 
