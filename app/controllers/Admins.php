@@ -193,4 +193,8 @@ class Admins extends Controller
         $data = $this->courseModel->getCourses();
         return $data;
     }
+    private function getDepartments()
+    {
+        # code...
+    }
 }

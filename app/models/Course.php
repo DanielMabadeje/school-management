@@ -21,8 +21,12 @@ class Course
         return $this->db->resultSet();
     }
 
-    public function addCourse(Type $var = null)
+    public function addCourse($data)
     {
-        # code...
+        $this->db->query("INSERT INTO course (name, department, level, description) VALUES(:name, :department, :level, :description)");
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':department', $data['department']);
+        $this->db->bind(':level', $data['level']);
+        $this->db->bind(':description', $data['description']);
     }
 }
