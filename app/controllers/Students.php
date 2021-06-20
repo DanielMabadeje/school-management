@@ -5,8 +5,12 @@ class Students extends Controller
     {
         $this->userModel = $this->model('User');
         $this->studentModel = $this->model('Student');
+        $this->staffModel = $this->model('Staff');
+        $this->examModel = $this->model('Exam');
         $this->attendanceModel = $this->model('Attendance');
         $this->testModel = $this->model('Test');
+        $this->courseModel = $this->model('Course');
+        $this->departmentModel = $this->model('Department');
     }
 
     public function Index()
