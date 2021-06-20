@@ -233,4 +233,37 @@ class Students extends Controller
             redirect('/');
         }
     }
+
+    private function getExams()
+    {
+        $data = $this->examModel->getExams();
+        return $data;
+    }
+    private function getTests()
+    {
+        $data = $this->testModel->getTests();
+        return $data;
+    }
+
+    private function getCourses()
+    {
+        $data = $this->courseModel->getCourses();
+        return $data;
+    }
+    private function getDepartments()
+    {
+        $data = $this->departmentModel->getDepartment();
+        return $data;
+    }
+
+    private function getStudents($limit = 10)
+    {
+        $data = $this->studentModel->getAllStudents();
+        return $data;
+    }
+    public function getCourseById($id)
+    {
+        $data = $this->courseModel->getCourseById($id);
+        return $data;
+    }
 }
