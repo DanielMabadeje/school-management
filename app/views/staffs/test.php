@@ -16,7 +16,7 @@
 
                                 <div class="col-md-12">
                                     <div class="col-md-4 ml-auto text-right">
-                                        <a href="<?= URLROOT ?>/staffs/addtest" class="btn btn-primary ml-auto">Add Test</a>
+                                        <a href="<?= URLROOT ?>/staffs/addtest" class="btn bg-other text-white ml-auto">Add Test</a>
                                     </div>
                                 </div>
                                 <div class="card-title mb-0">Tests</div>
@@ -42,8 +42,8 @@
                                                     <td><?= $test->date ?></td>
                                                     <td><?= $test->time ?></td>
                                                     <td>
-                                                    <a href="" class="btn btn-primary">Edit</a>
-                                                    <a href="" class="btn btn-danger">Delete</a>
+                                                        <a href="" class="btn bg-other text-white">Edit</a>
+                                                        <a href="" class="btn btn-danger">Delete</a>
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>
