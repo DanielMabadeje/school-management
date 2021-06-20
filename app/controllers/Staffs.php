@@ -47,7 +47,8 @@ class Staffs extends Controller
         } else {
 
             $data['attendance'] = $this->attendanceModel->getAttendanceList($attendance_id);
-            $this->view('staffs/attendanceview');
+            $data['students'] = $this->getStudents();
+            $this->view('staffs/attendanceview', $data);
         }
     }
 
@@ -149,6 +150,21 @@ class Staffs extends Controller
         }
     }
 
+
+    public function addStudentToAttendance()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $data = [
+                "attendanceStudent" => $_POST['attendanceStudent']
+            ];
+
+            foreach ($data['attendanceStudent'] as $key => $value) {
+                # code...
+            }
+        } else {
+            # code...
+        }
+    }
     private function checkIfStaffIsLoggedIn()
     {
         if (isLoggedIn()) {
@@ -179,6 +195,12 @@ class Staffs extends Controller
     private function getDepartments()
     {
         $data = $this->departmentModel->getDepartment();
+        return $data;
+    }
+
+    private function getStudents($limit = 10)
+    {
+        $data = $this->studentModel->getAllStudents();
         return $data;
     }
 }
