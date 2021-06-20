@@ -87,7 +87,6 @@
                                                     <td><?= $attendance->created_at ?></td>
                                                     <td>
                                                         <!-- <div class="row"> -->
-                                                        <a href="<?= URLROOT; ?>/staffs/attendance/<?= $attendance->id ?>" class="btn btn-primary">Edit</a>
                                                         <a href="<?= $attendance->id ?>" class="btn btn-danger">Delete</a>
                                                         <!-- </div> -->
 
