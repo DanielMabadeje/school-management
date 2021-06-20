@@ -49,4 +49,17 @@ class Attendance
 
         return $this->db->resultSet();
     }
+
+    public function addStudentToAttendance($attendance_id, $reg_no)
+    {
+        $this->db->query("INSERT INTO attendance_list (attendance_id, reg_no) VALUES (:attendance_id, :reg_no)");
+        $this->db->bind(":attendance_id", $attendance_id);
+        $this->db->bind(":reg_no", $reg_no);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

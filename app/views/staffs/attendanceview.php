@@ -23,19 +23,14 @@
                             <form action="" method="post">
 
                                 <?php foreach ($data['students'] as $student) : ?>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="attendanceStudent[]" value="">Option 1</label>
+                                    <div class="checkbox pt-md-4">
+                                        <label><input type="checkbox" name="attendanceStudent[]" value=""> <?= $student->name ?></label>
                                     </div>
                                 <?php endforeach; ?>
-                                <input type="submit" value="Submit" class="form-lg">
+                                <input type="submit" value="Submit" class="form-control form-control-lg btn bg-other text-white">
 
                             </form>
-                            <!-- <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 1</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 2</label>
-                            </div> -->
+
 
                         </div>
                         <div class="modal-footer">

@@ -161,6 +161,8 @@ class Staffs extends Controller
             foreach ($data['attendanceStudent'] as $key => $value) {
                 # code...
             }
+
+            redirect('staffs/attendance');
         } else {
             # code...
         }
