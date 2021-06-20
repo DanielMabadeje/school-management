@@ -61,7 +61,7 @@ class Students extends Controller
         $this->checkIfStudentIsLoggedIn();
 
 
-        if ($_GET['byfaculty']) {
+        if (isset($_GET['byfaculty']) && $_GET['byfaculty'] == "true") {
             $user = $this->getProfile($_SESSION['user_id']);
             $students = $this->studentModel->getStudentsByFaculty($user->faculty_id);
             // var_dump($students);
