@@ -36,7 +36,12 @@ class Admins extends Controller
     public function addCourse()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $data = [];
+            $data = [
+                'name' => $_POST['name'],
+                'description' => $_POST['description'],
+                'level' => $_POST['level'],
+                'department' => $_POST['department_id'],
+            ];
         } else {
             $this->view('admin/addCourse');
         }

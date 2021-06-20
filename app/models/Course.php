@@ -20,4 +20,9 @@ class Course
         $this->db->query("SELECT * FROM courses");
         return $this->db->resultSet();
     }
+
+    public function addCourse(Type $var = null)
+    {
+        # code...
+    }
 }
