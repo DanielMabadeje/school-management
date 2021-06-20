@@ -26,12 +26,24 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Course <sup>*</sup></label>
-                            <input type="text" name="course" class="form-control form-control-lg " value="">
+                            <!-- <input type="text" name="course" class="form-control form-control-lg " value=""> -->
+                            <select name="course" class="form-control form-control-lg ">
+
+                                <?php foreach ($data['courses'] as $course) : ?>
+                                    <option value="<?= $course->id ?>"><?= $course->name ?></option>
+                                <?php endforeach; ?>
+                            </select>
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
                             <label for="email">Department<sup>*</sup></label>
-                            <input type="text" name="department_id" class="form-control form-control-lg " value="">
+                            <!-- <input type="text" name="department_id" class="form-control form-control-lg " value=""> -->
+                            <select name="department_id" class="form-control form-control-lg ">
+
+                                <?php foreach ($data['departments'] as $department) : ?>
+                                    <option value="<?= $department->id ?>"><?= $department->name ?></option>
+                                <?php endforeach; ?>
+                            </select>
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
