@@ -1,9 +1,9 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<div class="section">
+<div class="section pic-bg">
     <div class="container">
 
 
-        <div class="col-md-5 mt-5 pt-5 mx-auto">
+        <div class="col-md-5 mt-5 pt-5 pb-5 mx-auto card">
             <div class="form">
                 <?php flash('register_success'); ?>
                 <?php flashfail('login_fail'); ?>
