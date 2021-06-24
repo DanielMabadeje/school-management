@@ -1,5 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<div class="section pic-bg">
+<div class="section pic-bg" style="<?= URLROOT ?>/img/WhatsApp Image 2021-06-07 at 2.37.49 AM.jpeg">
     <div class="container">
 
 
