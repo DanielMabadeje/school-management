@@ -1,5 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<div class="section pic-bg mt-0 pt-5" style="
+<div class="section pic-bg mt-0 pt-5 pb-5" style="
                             background:linear-gradient(to right,  rgba(11, 12, 12, 0.8),  rgba(8, 8, 8, 0.8)), url('<?= URLROOT ?>/img/WhatsApp Image 2021-06-07 at 2.37.49 AM.jpeg');
                             background-size:cover !important;">
     <div class="container">
