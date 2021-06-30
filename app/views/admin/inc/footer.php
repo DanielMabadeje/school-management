@@ -5,7 +5,7 @@
 <div class="bg-light col-12 mt-5 p-4 text-center" style="bottom:0;">
     <div class="container">
         <div class="col-md-12">
-            <h5 class="">Built By <strong class="text-other">Daniel Mabadeje</strong> All Rights Reserved
+            <h5 class="">Built By <strong class="text-other">Amarachi</strong> All Rights Reserved
             </h5>
         </div>
     </div>
