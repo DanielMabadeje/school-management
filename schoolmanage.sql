@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 30, 2021 at 11:20 AM
+-- Generation Time: Jun 30, 2021 at 11:30 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.11
 
@@ -336,8 +336,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `memberId`, `password`, `username`, `email`, `groupId`, `isBanned`, `isApproved`, `created_at`, `updated_at`) VALUES
 (1, 'student', '$2y$10$8uOzZzPNbTmWqXa1EcWfK.ibbCo29IFsA7w0WYsnsUesz4kKywade', 'John', 'mabadejedaniel1@gmail.com', '2', '0', '1', '2021-06-09 20:31:33', '2021-06-30 11:19:51'),
-(2, 'admin', '$2y$10$7v4qBlBqevuDlAXVUkqnuewNKz9/haE2V9KltORC1px9UWfunIl6G', NULL, 'admin@admin.com', '1', '0', '1', '2021-06-10 18:55:54', '2021-06-10 18:55:54'),
-(3, 'staff', '$2y$10$7v4qBlBqevuDlAXVUkqnuewNKz9/haE2V9KltORC1px9UWfunIl6G', 'staff', 'staff@email.com', '3', '0', '1', '2021-06-13 19:33:11', '2021-06-13 19:33:11'),
+(2, 'admin', '$2y$10$8uOzZzPNbTmWqXa1EcWfK.ibbCo29IFsA7w0WYsnsUesz4kKywade', NULL, 'admin@admin.com', '1', '0', '1', '2021-06-10 18:55:54', '2021-06-30 11:28:30'),
+(3, 'staff', '$2y$10$8uOzZzPNbTmWqXa1EcWfK.ibbCo29IFsA7w0WYsnsUesz4kKywade', 'staff', 'staff@email.com', '3', '0', '1', '2021-06-13 19:33:11', '2021-06-30 11:28:57'),
 (4, 'student', '$2y$10$7v4qBlBqevuDlAXVUkqnuewNKz9/haE2V9KltORC1px9UWfunIl6G', 'Richard', 'richard@gmail.com', '2', '0', '1', '2021-06-20 18:22:36', '2021-06-20 18:22:36'),
 (5, 'student', '$2y$10$7v4qBlBqevuDlAXVUkqnuewNKz9/haE2V9KltORC1px9UWfunIl6G', 'Michael', 'michael@gmail.com', '2', '0', '1', '2021-06-20 18:22:36', '2021-06-20 18:22:36');
 
