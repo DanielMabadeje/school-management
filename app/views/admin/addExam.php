@@ -46,8 +46,8 @@
 
                                     <?php foreach ($data['courses'] as $course) : ?>
                                         <option value="<?= $course->id ?>"><?= $course->name ?></option>
-                                    <?php e
-                                <span class="invalid-feedback"><?= $data['password_err']; ?></span>
+                                    <?php endforeach; ?>
+                                    <span class="invalid-feedback"><?= $data['password_err']; ?></span>
                             </div>
                             <div class="form-group">
                                 <label for="name">Department: <sup>*</sup></label>
