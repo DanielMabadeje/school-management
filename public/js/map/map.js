@@ -10,3 +10,8 @@ if ('geolocation' in  navigator) {
         });
     });
 }
+
+var pusher = new Pusher('', {
+    cluster:'',
+    encrypted: true
+})
