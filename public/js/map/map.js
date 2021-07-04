@@ -11,10 +11,68 @@ if ('geolocation' in  navigator) {
     });
 }
 
-var pusher = new Pusher('', {
-    cluster:'',
+
+var username;
+
+// reference for DOM nodes
+var saveNameButton = document.getElementById('saveNameButton');
+var saveNameBox = document.getElementById('name-box');
+var nameInput = document.getElementById('name');
+var welcomeHeading = document.getElementById('welcome-message');
+var deliveryHeroBox = document.getElementById('delivery-hero-box');
+
+saveNameButton.addEventListener('click', saveName);
+
+// all functions, event handlers
+function saveName (e) {
+  var input = nameInput.value;
+  if (input && input.trim()) {
+    username = input;
+
+    // hide the name box
+    saveNameBox.classList.add('hidden');
+
+    // set the name
+    welcomeHeading.innerHTML = 'Hi! <strong>' + username +
+      (mode === 'user'
+        ? '</strong>, type in your Delivery Hero\'s name to track your food.' 
+        : '</strong>, type in the customer name to locate the address');
+    // show the delivery hero's div now
+     deliveryHeroBox.classList.remove('hidden');
+  }
+  return;
+}
+
+
+
+
+
+
+
+
+
+
+
+var pusher = new Pusher('9a3f71f9e4863b13493f', {
+    cluster:'eu',
     encrypted: true
 })
+
+
+
+
+sendLocationInterval = setInterval(function () {
+    // not using `triggerLocationChangeEvents` to keep the pipes different
+    myLocationChannel.trigger('client-location', myLastKnownLocation)
+  }, 5000);
+
+// also update myLastKnownLocation everytime we trigger an event
+function triggerLocationChangeEvents (channel, location) {
+  // update myLastLocation
+  myLastKnownLocation = location;
+  channel.trigger('client-location', location);
+}
+
 
 
 function createMyLocationChannel(name) {
