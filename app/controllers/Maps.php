@@ -15,6 +15,6 @@ class Maps extends Controller
 
     public function Index()
     {
-        $this->view("maps/index");
+        $this->view("map/index");
     }
 }
