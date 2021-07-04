@@ -48,4 +48,19 @@ function createMyLocationChannel(name) {
 
 function addDeliveryHero(e) {
     var deliveryHeroName=deliveryHeroNameInput.value;
+
+    //if already present return
+
+    if(deliveryHeroesLocationMap[deliveryHeroName]) return;
+    if (deliveryHeroName) {
+        var deliveryHeroChannelName = 'private-'+deliveryHeroName;
+
+        var deliveryHeroChannel=pusher.subscribe(deliveryHeroName)
+        deliveryHeroChannel.bind('client-location', function (nextLocation) {
+            //first save the location
+            // bail if  location is same
+
+
+          })
+    }
 }
