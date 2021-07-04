@@ -1,5 +1,5 @@
 <?php
-class Students extends Controller
+class Parents extends Controller
 {
     public function __construct()
     {
