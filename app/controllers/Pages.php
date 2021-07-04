@@ -132,9 +132,13 @@ class Pages extends Controller
             case 'admin':
                 redirect('admins');
                 break;
+            case 'parent':
+                redirect('parents');
+                break;
+
 
             default:
-                # code...
+                redirect("/");
                 break;
         }
         // redirect('posts');
