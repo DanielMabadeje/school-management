@@ -14,4 +14,13 @@
 </div>
 
 
+
+<div id="delivery-hero-box" class="name-box hidden">
+    <h3 id="welcome-message"></h3>
+    <h4 id="delivery-heroes-list"></h4>
+    <input id="deliveryHeroName" type="text" placeholder="e.g. Shelly">
+    <button id="addDeliveryHeroButton">Add</button>
+</div>
+
+
 <?php require APPROOT . '/views/map/inc/footer.php'; ?>
