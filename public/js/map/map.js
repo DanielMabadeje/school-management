@@ -36,5 +36,16 @@ function createMyLocationChannel(name) {
         });
 
         // also start a setInterval to keep sending the location every 5  secs
+        sendLocationInterval=setInterval(function (params) {
+
+            // not using `triggerLocationChangeEvents`  to keep the pipes different
+            myLocationChannel.trigger('client-location', myLastKnownLocation)
+        }, 5000);
     })
+
+}
+
+
+function addDeliveryHero(e) {
+    // var
 }
