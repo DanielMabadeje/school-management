@@ -4,6 +4,7 @@
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVgfNr7f3vKGdY4bmGc6hJMqBM0MhfBL4"></script> -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF17W43mzMp_WKspNwxMAZOW7zf_dejbc"></script>
 <!-- <script type="text/javascript" src="<?php echo URLROOT; ?>/js/map/map.js"></script> -->
-<script type="text/javascript" src="<?php echo URLROOT; ?>/js/map/index.js"></script>
+<!-- <script type="text/javascript" src="<?php echo URLROOT; ?>/js/map/index.js"></script> -->
+<script type="text/javascript" src="<?php echo URLROOT; ?>/js/map/main.js"></script>
 
 <!-- AIzaSyDF17W43mzMp_WKspNwxMAZOW7zf_dejbc -->
