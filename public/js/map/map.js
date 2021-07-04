@@ -58,6 +58,28 @@ var pusher = new Pusher('9a3f71f9e4863b13493f', {
     encrypted: true
 })
 
+function createMyLocationChannel (name) {
+    var myLocationChannel = pusher.subscribe('private-' + name);
+    myLocationChannel.bind('pusher:subscription_succeeded', function() {
+      // safe to now trigger events
+      // use the watchPosition API to watch the changing location
+      // and trigger events with new coordinates
+      locationWatcher = navigator.geolocation.watchPosition(function(position) {
+        var location = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        triggerLocationChangeEvents(myLocationChannel, location);
+      });
+  
+      // also start a setInterval to keep sending the loction every 5 secs
+      sendLocationInterval = setInterval(function () {
+        // not using `triggerLocationChangeEvents` to keep the pipes different
+        myLocationChannel.trigger('client-location', myLastKnownLocation)
+      }, 5000);
+    });
+  }
+
 
 
 
@@ -75,33 +97,33 @@ function triggerLocationChangeEvents (channel, location) {
 
 
 
-function createMyLocationChannel(name) {
-    var myLocationChannel = pusher.subscribe('private-' + name);
-    myLocationChannel.bind('pusher:subscription_succeeded', function (params) {
+// function createMyLocationChannel(name) {
+//     var myLocationChannel = pusher.subscribe('private-' + name);
+//     myLocationChannel.bind('pusher:subscription_succeeded', function (params) {
         
-        // safe to now trigger events
-        // use the watchPosition API to watch the changing location
-        // and trigger events with new coordinates
+//         // safe to now trigger events
+//         // use the watchPosition API to watch the changing location
+//         // and trigger events with new coordinates
 
-        locationWatcher=navigator.geolocation.watchPosition(function (position) {
-            var location = {
-                lat:position.coords.latitude,
-                lng:position.coords.longitude
-            };
+//         locationWatcher=navigator.geolocation.watchPosition(function (position) {
+//             var location = {
+//                 lat:position.coords.latitude,
+//                 lng:position.coords.longitude
+//             };
 
-            triggerLocationChangeEvents(myLocationChannel, location);
+//             triggerLocationChangeEvents(myLocationChannel, location);
             
-        });
+//         });
 
-        // also start a setInterval to keep sending the location every 5  secs
-        sendLocationInterval=setInterval(function (params) {
+//         // also start a setInterval to keep sending the location every 5  secs
+//         sendLocationInterval=setInterval(function (params) {
 
-            // not using `triggerLocationChangeEvents`  to keep the pipes different
-            myLocationChannel.trigger('client-location', myLastKnownLocation)
-        }, 5000);
-    })
+//             // not using `triggerLocationChangeEvents`  to keep the pipes different
+//             myLocationChannel.trigger('client-location', myLastKnownLocation)
+//         }, 5000);
+//     })
 
-}
+// }
 
 
 function addDeliveryHero(e) {
