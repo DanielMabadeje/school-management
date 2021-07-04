@@ -75,4 +75,43 @@ function addDeliveryHero(e) {
      deliveryHeroTrackButton.addEventListener('click', showDeliveryHeroOnMap.bind(null, deliveryHeroName, true, false, {}));
      deliveryHeroesList.appendChild(deliveryHeroTrackButton);
    }
-}
+
+
+   var deliveryHeroChannelName = 'private-' + deliveryHeroName;
+   var deliveryHeroChannel = pusher.subscribe(deliveryHeroChannelName);
+
+
+
+   deliveryHeroChannel.bind('client-location', function (nextLocation) {
+    // first save the location
+    // bail if location is same
+    var prevLocation = deliveryHeroesLocationMap[deliveryHeroName] || {};
+    deliveryHeroesLocationMap[deliveryHeroName] = nextLocation;
+    showDeliveryHeroOnMap(deliveryHeroName, false, true, prevLocation);
+ });
+
+
+
+function showDeliveryHeroOnMap (deliveryHeroName, center, addMarker, prevLocation) {
+    if (!deliveryHeroesLocationMap[deliveryHeroName]) return;
+    // first center the map
+    if (center) map.setCenter(deliveryHeroesLocationMap[deliveryHeroName]);
+    var nextLocation = deliveryHeroesLocationMap[deliveryHeroName];
+    
+    // add a marker
+    if ((prevLocation.lat === nextLocation.lat) && (prevLocation.lng === nextLocation.lng)) {
+      return;
+    }
+    
+    if (addMarker) {
+      var marker = deliveryHeroesMarkerMap[deliveryHeroName];
+      marker = marker || new google.maps.Marker({
+        map: map,
+        label: deliveryHeroName,
+        animation: google.maps.Animation.BOUNCE,
+      });
+      marker.setPosition(deliveryHeroesLocationMap[deliveryHeroName]);
+      deliveryHeroesMarkerMap[deliveryHeroName] = marker;
+    }
+  }
+
