@@ -47,5 +47,5 @@ function createMyLocationChannel(name) {
 
 
 function addDeliveryHero(e) {
-    // var
+    var deliveryHeroName=deliveryHeroNameInput.value;
 }
