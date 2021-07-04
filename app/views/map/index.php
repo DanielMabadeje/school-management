@@ -1,3 +1,7 @@
 <?php require APPROOT . '/views/map/inc/header.php'; ?>
 
-MAP
+<div class="header"></div>
+
+<div class="main">
+    <div id="map"></div>
+</div>
