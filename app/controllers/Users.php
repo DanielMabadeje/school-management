@@ -186,14 +186,15 @@ class Users extends Controller
 
 
 
-    public function dashboard($page){
+    public function dashboard($page)
+    {
 
 
         switch ($page) {
             case 'value':
                 # code...
                 break;
-            
+
             default:
                 # code...
                 break;
@@ -204,7 +205,7 @@ class Users extends Controller
     {
         $_SESSION['user_id'] = $user->id;
         $_SESSION['email'] = $user->email;
-        // $_SESSION['user_name'] = $user->name;
+        $_SESSION['user_name'] = $user->username;
         $_SESSION['membership_group'] = $user->memberId;
 
         switch ($user->memberId) {
@@ -217,9 +218,13 @@ class Users extends Controller
             case 'admin':
                 redirect('admins');
                 break;
+            case 'parent':
+                redirect('parents');
+                break;
+
 
             default:
-                # code...
+                redirect("/");
                 break;
         }
         // redirect('posts');
