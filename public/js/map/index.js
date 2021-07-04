@@ -21,6 +21,8 @@ if ('geolocation' in navigator) {
 
 
 
+//   break;
+
 
   var username;
 
@@ -53,6 +55,16 @@ function saveName (e) {
   return;
 }
 
+var Pusher = require("pusher");
+
+var pusher = new Pusher({
+  appId: "APP_ID",
+  key: "APP_KEY",
+  secret: "APP_SECRET",
+  cluster: "APP_CLUSTER",
+});
+
+pusher.trigger("my-channel", "my-event", { message: "hello world" });
 
 
 
@@ -90,10 +102,10 @@ var pusher = new Pusher('9a3f71f9e4863b13493f', {
 
 
 
-  sendLocationInterval = setInterval(function () {
-    // not using `triggerLocationChangeEvents` to keep the pipes different
-    myLocationChannel.trigger('client-location', myLastKnownLocation)
-  }, 5000);
+//   sendLocationInterval = setInterval(function () {
+//     // not using `triggerLocationChangeEvents` to keep the pipes different
+//     myLocationChannel.trigger('client-location', myLastKnownLocation)
+//   }, 5000);
 
 // also update myLastKnownLocation everytime we trigger an event
 function triggerLocationChangeEvents (channel, location) {
@@ -105,7 +117,7 @@ function triggerLocationChangeEvents (channel, location) {
 
 
 
-
+var deliveryHeroesAddButton=document.getElementById("addDeliveryHeroButton")
 deliveryHeroesAddButton.addEventListener('click', addDeliveryHero);
 
 
