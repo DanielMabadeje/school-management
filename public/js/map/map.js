@@ -59,8 +59,20 @@ function addDeliveryHero(e) {
         deliveryHeroChannel.bind('client-location', function (nextLocation) {
             //first save the location
             // bail if  location is same
+            var prevLocation = deliveryHeroesLocationMap[deliveryHeroName] || {};
+            deliveryHeroesLocationMap[deliveryHeroName] = nextLocation;
+            showDeliveryHeroOnMap(deliveryHeroName, false, true, prevLocation);
 
 
-          })
+          });
     }
+
+
+     // add the name to the list
+     var deliveryHeroTrackButton = document.createElement('button');
+     deliveryHeroTrackButton.classList.add('small');
+     deliveryHeroTrackButton.innerHTML = deliveryHeroName;
+     deliveryHeroTrackButton.addEventListener('click', showDeliveryHeroOnMap.bind(null, deliveryHeroName, true, false, {}));
+     deliveryHeroesList.appendChild(deliveryHeroTrackButton);
+   }
 }
