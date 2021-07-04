@@ -1,48 +1,12 @@
 <?php require APPROOT . '/views/map/inc/header.php'; ?>
 
-<!-- 
-<div class="header"></div>
-
-<div id="name-box" class="name-box">
-    <h3>Enter your username</h3>
-    <input id="name" type="text" placeholder="e.g. Mike">
-    <button id="saveNameButton">Save</button>
-</div>
-
-<div class="main container">
-    <div id="map"></div>
-</div>
+<main class="container">
+      <div id="map" class="map"></div>
+      <p id="info" class="info"></p>
+    </main>
 
 
-
-<div id="delivery-hero-box" class="name-box hidden">
-    <h3 id="welcome-message"></h3>
-    <h4 id="delivery-heroes-list"></h4>
-    <input id="deliveryHeroName" type="text" placeholder="e.g. Shelly">
-    <button id="addDeliveryHeroButton">Add</button>
-</div> -->
-
-
-<div class="header">
-      <h1>Track your Food!</h1>
-    </div>
-    <div class="container">
-      <div id="name-box" class="name-box">
-        <h3>Enter your username</h3>
-        <input id="name" type="text" placeholder="e.g. Mike">
-        <button id="saveNameButton">Save</button>
-      </div>
-
-      <div id="delivery-hero-box" class="name-box hidden">
-        <h3 id="welcome-message"></h3>
-        <h4 id="delivery-heroes-list"></h4>
-        <input id="deliveryHeroName" type="text" placeholder="e.g. Shelly">
-        <button id="addDeliveryHeroButton">Add</button>
-      </div>
-
-      <div id="map"></div>
-    </div>
-
-
+    <script src="<?php echo URLROOT; ?>/js/map/normal.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVgfNr7f3vKGdY4bmGc6hJMqBM0MhfBL4&callback=init"></script>
 <?php 
 // require APPROOT . '/views/map/inc/footer.php'; ?>

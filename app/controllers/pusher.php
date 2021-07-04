@@ -19,6 +19,12 @@ class pusher extends Controller
     }
 
     public function auth(){
-        
+        $data=[
+            "auth"=>"9a3f71f9e4863b13493f:58df8b0c36d6982b82c3ecf6b4662e34fe8c25bba48f5369f135bf843651c3a4"
+        ];
+
+        die(
+          json_encode($data)
+        );
     }
 }

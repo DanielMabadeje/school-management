@@ -23,13 +23,19 @@ var map
 
 // google.maps.event.addDomListener(window, 'load', init);
 
-map = new google.maps.Map( document.getElementById('map')
-                           , { zoom: zoom
-                             , mapTypeId: google.maps.MapTypeId.ROADMAP
-                             });
+// map = new google.maps.Map( document.getElementById('map')
+//                            , { zoom: zoom
+//                              , mapTypeId: google.maps.MapTypeId.ROADMAP
+//                              });
+
+map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
 // get the location via Geolocation API
 if ('geolocation' in navigator) {
     var currentLocation = navigator.geolocation.getCurrentPosition(function (position) {
+        // var currentLocation = navigator.geolocation.watchPosition(function (position) {
       map.setCenter({
         lat: position.coords.latitude,
         lng: position.coords.longitude
@@ -88,7 +94,16 @@ function saveName (e) {
 
 var pusher = new Pusher('9a3f71f9e4863b13493f', {
     cluster: 'eu',
-    encrypted: true
+    encrypted: true,
+    authEndpoint: "pusher/auth"
+
+
+    // auth: {
+    //     params: {
+    //       param1: 'value1',
+    //       param2: 'value2'
+    //     },
+
   });
 
 
