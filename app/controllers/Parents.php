@@ -15,13 +15,13 @@ class Students extends Controller
 
     public function Index()
     {
-        $this->checkIfStudentIsLoggedIn();
+        $this->checkIfParentIsLoggedIn();
         $this->view('students/index');
     }
 
     public function courses($course_id = null)
     {
-        $this->checkIfStudentIsLoggedIn();
+        $this->checkIfParentIsLoggedIn();
         if (is_null($course_id)) {
             $user = $this->getProfile($_SESSION['user_id']);
             $courses = $this->studentModel->getCourses($user->level);
@@ -58,7 +58,7 @@ class Students extends Controller
     public function students()
     {
 
-        $this->checkIfStudentIsLoggedIn();
+        $this->checkIfParentIsLoggedIn();
 
 
         if (isset($_GET['byfaculty']) && $_GET['byfaculty'] == "true") {
@@ -81,7 +81,7 @@ class Students extends Controller
 
     public function attendance($attendance_id = null)
     {
-        $this->checkIfStudentIsLoggedIn();
+        $this->checkIfParentIsLoggedIn();
         $user = $this->getProfile($_SESSION['user_id']);
 
         if (is_null($attendance_id)) {
@@ -264,11 +264,11 @@ class Students extends Controller
 
     public function getProfile($user_id)
     {
-        $this->checkIfStudentIsLoggedIn();
+        $this->checkIfParentIsLoggedIn();
         $data = $this->studentModel->getStudentProfile($user_id);
         return $data;
     }
-    private function checkIfStudentIsLoggedIn()
+    private function checkIfParentIsLoggedIn()
     {
         if (isLoggedIn()) {
 
