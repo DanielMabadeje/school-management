@@ -94,6 +94,7 @@
       if (deliveryHeroesLocationMap[deliveryHeroName]) return;
       if (deliveryHeroName) {
         var deliveryHeroChannelName = 'private-' + deliveryHeroName;
+        setCookie("pusher_private", deliveryHeroChannelName, 1);
         var deliveryHeroChannel = pusher.subscribe(deliveryHeroChannelName);
         deliveryHeroChannel.bind('client-location', function (nextLocation) {
           // first save the location
@@ -142,7 +143,13 @@
     }
   
     function createMyLocationChannel (name) {
+
+      // setCookie("pusher_private", myLocationChannel);
+      var myname='private-'+name
+      setCookie("pusher_private", myname, 1);
       var myLocationChannel = pusher.subscribe('private-' + name);
+      
+      
       myLocationChannel.bind('pusher:subscription_succeeded', function() {
         // safe to now trigger events
         // use the watchPosition API to watch the changing location
@@ -174,6 +181,8 @@
           cookie += "; max-age=" + (daysToLive*24*60*60);
           
           document.cookie = cookie;
+
+          console.log("cookie");
       }
   }
   
