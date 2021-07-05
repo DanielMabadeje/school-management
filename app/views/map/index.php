@@ -26,7 +26,7 @@
 <div class="header">
   <h1>Track your Student!</h1>
 </div>
-<div class="container">
+<div class="containe">
   <div id="name-box" class="name-box">
     <h3>Enter your username</h3>
     <input id="name" type="text" placeholder="e.g. Mike">
