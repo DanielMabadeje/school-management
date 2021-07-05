@@ -24,8 +24,15 @@
     var get__username=getUrlParameter('reusername') || false
 
     if(get__username){
-      console.log(get__username)
-      createMyLocationChannel(getusername);
+      // console.log(get__username)
+      createMyLocationChannel(get__username);
+
+      welcomeHeading.innerHTML = 'Hi! <strong>' + get__username +
+          (mode === 'user'
+            ? '</strong>, type in your Student\'s name to track him/her.' 
+            : '</strong>, type in your Student\'s name to track him/her');
+        // show the delivery hero's div now
+        deliveryHeroBox.classList.remove('hidden');
     }
   
 
@@ -156,11 +163,12 @@
     function createMyLocationChannel (name) {
 
 
-// console.log(name)
+console.log(name)
       // setCookie("pusher_private", myLocationChannel);
       var myname='private-'+name
       setCookie("pusher_private", myname, 1);
-      var myLocationChannel = pusher.subscribe('private-' + name);
+      // var myLocationChannel = pusher.subscribe('private-' + name);
+      var myLocationChannel = pusher.subscribe(myname);
       
       
       myLocationChannel.bind('pusher:subscription_succeeded', function() {
@@ -208,8 +216,8 @@
     }
   }());
 
-   function addLocation(thisusername){
+  //  function addLocation(thisusername){
 
-      alert(thisusername);
-      createMyLocationChannel(thisusername);
-    }
+  //     // alert(thisusername);
+  //     createMyLocationChannel(thisusername);
+  //   }
