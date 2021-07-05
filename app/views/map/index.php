@@ -24,7 +24,7 @@
 
 
 <div class="header">
-  <h1>Track your Food!</h1>
+  <h1>Track your Student!</h1>
 </div>
 <div class="container">
   <div id="name-box" class="name-box">
