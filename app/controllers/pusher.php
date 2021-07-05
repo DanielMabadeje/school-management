@@ -11,6 +11,7 @@ class pusher extends Controller
     {
         $this->userModel = $this->model('User');
         $this->studentModel = $this->model('Student');
+        header('Content-type: application/json; charset=utf-8');
     }
 
     public function Index()
@@ -18,13 +19,17 @@ class pusher extends Controller
         $this->view("map/index");
     }
 
-    public function auth(){
-        $data=[
-            "auth"=>"9a3f71f9e4863b13493f:58df8b0c36d6982b82c3ecf6b4662e34fe8c25bba48f5369f135bf843651c3a4"
+    public function auth()
+    {
+
+
+
+        // hash_hmac('sha256', $string, $secret);
+        // hash_hmac('sha256', $string, "secret");
+        $data = [
+            "auth" => "9a3f71f9e4863b13493f:58df8b0c36d6982b82c3ecf6b4662e34fe8c25bba48f5369f135bf843651c3a4"
         ];
 
-        die(
-          json_encode($data)
-        );
+        die(json_encode($data));
     }
 }
