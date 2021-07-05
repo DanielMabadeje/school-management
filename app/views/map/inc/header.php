@@ -51,13 +51,13 @@ h1, h2, h3, h4 {
   height: 40px;
   padding: 24px 16px;
   color: #fff;
-  background: #512da8;
+  background: black;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .name-box {
   padding: 4px 20px;
-  background: #673ab7;
+  background: black;
   color: #fff;
 }
 
@@ -75,8 +75,8 @@ h1, h2, h3, h4 {
 .name-box button {
   color: #fff;
   padding: 10px;
-  background: #ff4081;
-  border-color: #ff4081;
+  background: rgb(230, 131, 2);
+  border-color: rgb(230, 131, 2);
   outline: none;
 }
 

@@ -23,18 +23,7 @@
 
     var get__username=getUrlParameter('reusername') || false
 
-    if(get__username){
-      // console.log(get__username)
-      createMyLocationChannel(get__username);
-
-      welcomeHeading.innerHTML = 'Hi! <strong>' + get__username +
-          (mode === 'user'
-            ? '</strong>, type in your Student\'s name to track him/her.' 
-            : '</strong>, type in your Student\'s name to track him/her');
-        // show the delivery hero's div now
-        deliveryHeroBox.classList.remove('hidden');
-    }
-  
+    
 
    
 
@@ -78,6 +67,25 @@
         //     },
     
       });
+
+
+
+      if(get__username){
+      // console.log(get__username)
+      username=get__username
+      createMyLocationChannel(username);
+
+
+ // hide the name box
+        saveNameBox.classList.add('hidden');
+      welcomeHeading.innerHTML = 'Hi! <strong>' + get__username +
+          (mode === 'user'
+            ? '</strong>, type in your Student\'s name to track him/her.' 
+            : '</strong>, type in your Student\'s name to track him/her');
+        // show the delivery hero's div now
+        deliveryHeroBox.classList.remove('hidden');
+    }
+  
   
     // add eventlisteners
     saveNameButton.addEventListener('click', saveName);
