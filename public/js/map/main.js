@@ -20,7 +20,18 @@
   
     // mode - user's or delivery guy's
     var mode = getUrlParameter('mode') || 'user';
+
+    var get__username=getUrlParameter('reusername') || false
+
+    if(get__username){
+      console.log(get__username)
+      createMyLocationChannel(getusername);
+    }
   
+
+   
+
+
     // load the map
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: -34.397, lng: 150.644},
@@ -144,6 +155,8 @@
   
     function createMyLocationChannel (name) {
 
+
+// console.log(name)
       // setCookie("pusher_private", myLocationChannel);
       var myname='private-'+name
       setCookie("pusher_private", myname, 1);
@@ -194,3 +207,9 @@
       return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     }
   }());
+
+   function addLocation(thisusername){
+
+      alert(thisusername);
+      createMyLocationChannel(thisusername);
+    }
