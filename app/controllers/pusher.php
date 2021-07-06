@@ -5,7 +5,7 @@
  * in order to load a view inside a folder of the view folder
  * the folder/filename must be parsed
  */
-class pusher extends Controller
+class Pusher extends Controller
 {
     public function __construct()
     {

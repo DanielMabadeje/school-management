@@ -164,7 +164,7 @@
       setCookie("pusher_private", myname, 1);
       // var myLocationChannel = pusher.subscribe('private-' + name);
       var myLocationChannel = pusher.subscribe(myname);
-      console.log(myLocationChannel);
+      // console.log(myLocationChannel);
       
       myLocationChannel.bind('pusher:subscription_succeeded', function() {
         // safe to now trigger events
@@ -216,7 +216,11 @@
       // createMyLocationChannel(username);
 
       window.addEventListener('load', (event) => {
-        createMyLocationChannel(username);
+
+        setCookie("pusher_private", 'private-'+username, 1);
+        setTimeout (function () { createMyLocationChannel(username); }, 30000)
+        // setCookie("pusher_private", username, 1);
+        // createMyLocationChannel(username);
         // console.log('The page has fully loaded');
     });
       // setTimeout (function () { createMyLocationChannel(username); }, 10000)
