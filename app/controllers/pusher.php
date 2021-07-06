@@ -26,7 +26,8 @@ class Pusher extends Controller
         // 131928.7777463
         // hash_hmac('sha256', $string, $secret);
         // $decode_string=hash_hmac('sha256', $_COOKIE['pusher_private'], "secret");
-        $decode_string = hash_hmac('sha256', $_POST['socket_id'] . ':' . $_COOKIE['pusher_private'], "3293b4a15359d4d3c8bf");
+        // $decode_string = hash_hmac('sha256', $_POST['socket_id'] . ':' . $_COOKIE['pusher_private'], "3293b4a15359d4d3c8bf");
+        $decode_string = hash_hmac('sha256', $_POST['socket_id'] . ':' . $_POST['channel_name'], "3293b4a15359d4d3c8bf");
         $data = [
             "auth" => "9a3f71f9e4863b13493f:" . $decode_string
         ];
