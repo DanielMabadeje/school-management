@@ -218,7 +218,7 @@
       window.addEventListener('load', (event) => {
 
         setCookie("pusher_private", 'private-'+username, 1);
-        setTimeout (function () { createMyLocationChannel(username); }, 30000)
+        setTimeout (function () { createMyLocationChannel(username); }, 5000)
         // setCookie("pusher_private", username, 1);
         // createMyLocationChannel(username);
         // console.log('The page has fully loaded');
