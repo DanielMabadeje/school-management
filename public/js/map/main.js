@@ -58,7 +58,7 @@
     var pusher = new Pusher('9a3f71f9e4863b13493f', {
         cluster: 'eu',
         encrypted: true,
-        authEndpoint: "pusher/index"
+        authEndpoint: "http://localhost/schoolmanage/pusher/index"
     
     
         // auth: {
@@ -218,9 +218,9 @@
       window.addEventListener('load', (event) => {
 
         setCookie("pusher_private", 'private-'+username, 1);
-        setTimeout (function () { createMyLocationChannel(username); }, 5000)
+        // setTimeout (function () { createMyLocationChannel(username); }, 5000)
         // setCookie("pusher_private", username, 1);
-        // createMyLocationChannel(username);
+        createMyLocationChannel(username);
         // console.log('The page has fully loaded');
     });
       // setTimeout (function () { createMyLocationChannel(username); }, 10000)
