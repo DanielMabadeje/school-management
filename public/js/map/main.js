@@ -24,6 +24,7 @@
     var get__username=getUrlParameter('reusername') || false
 
     
+    // console.log(getUrlParameter('reusername'))
 
    
 
@@ -70,21 +71,7 @@
 
 
 
-      if(get__username){
-      // console.log(get__username)
-      username=get__username
-      createMyLocationChannel(username);
-
-
- // hide the name box
-        saveNameBox.classList.add('hidden');
-      welcomeHeading.innerHTML = 'Hi! <strong>' + get__username +
-          (mode === 'user'
-            ? '</strong>, type in your Student\'s name to track him/her.' 
-            : '</strong>, type in your Student\'s name to track him/her');
-        // show the delivery hero's div now
-        deliveryHeroBox.classList.remove('hidden');
-    }
+  
   
   
     // add eventlisteners
@@ -104,7 +91,7 @@
         welcomeHeading.innerHTML = 'Hi! <strong>' + username +
           (mode === 'user'
             ? '</strong>, type in your Student\'s name to track him/her.' 
-            : '</strong>, type in your Student\'s name to track him/her');
+            : '</strong>, type in your Studente\'s name to track him/her');
         // show the delivery hero's div now
         deliveryHeroBox.classList.remove('hidden');
   
@@ -122,6 +109,8 @@
         var deliveryHeroChannelName = 'private-' + deliveryHeroName;
         setCookie("pusher_private", deliveryHeroChannelName, 1);
         var deliveryHeroChannel = pusher.subscribe(deliveryHeroChannelName);
+
+        
         deliveryHeroChannel.bind('client-location', function (nextLocation) {
           // first save the location
           // bail if location is same
@@ -170,14 +159,12 @@
   
     function createMyLocationChannel (name) {
 
-
-console.log(name)
       // setCookie("pusher_private", myLocationChannel);
       var myname='private-'+name
       setCookie("pusher_private", myname, 1);
       // var myLocationChannel = pusher.subscribe('private-' + name);
       var myLocationChannel = pusher.subscribe(myname);
-      
+      console.log(myLocationChannel);
       
       myLocationChannel.bind('pusher:subscription_succeeded', function() {
         // safe to now trigger events
@@ -211,7 +198,7 @@ console.log(name)
           
           document.cookie = cookie;
 
-          console.log("cookie");
+          // console.log("cookie");
       }
   }
   
@@ -221,6 +208,26 @@ console.log(name)
       var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
       var results = regex.exec(location.search);
       return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    if(get__username){
+      // console.log(get__username)
+      username=get__username
+      // createMyLocationChannel(username);
+
+      window.addEventListener('load', (event) => {
+        createMyLocationChannel(username);
+        // console.log('The page has fully loaded');
+    });
+      // setTimeout (function () { createMyLocationChannel(username); }, 10000)
+      // hide the name box
+        saveNameBox.classList.add('hidden');
+        welcomeHeading.innerHTML = 'Hi! <strong>' + get__username +
+          (mode === 'user'
+            ? '</strong>, type in your Student\'s name to track him/her.' 
+            : '</strong>, type in your Student\'s name to track him/her');
+        // show the delivery hero's div now
+        deliveryHeroBox.classList.remove('hidden');
     }
   }());
 
