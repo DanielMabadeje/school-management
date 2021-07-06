@@ -119,9 +119,12 @@ class Admins extends Controller
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $data = [
                 'name' => trim($_POST['name']),
-                'description' => trim($_POST['description']),
-                'course_id' => trim($_POST['course']),
-                'department_id' => trim($_POST['department'])
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['password']),
+                'department_id' => trim($_POST['department']),
+                'memberId' => "staff",
+                'groupId' => 3,
+                'isApproved' => 1
             ];
 
             if ($this->examModel->addExam($data)) {
@@ -130,7 +133,9 @@ class Admins extends Controller
                 # code...
             }
         } else {
-            $this->view('admin/addStaff');
+            $data = [];
+            $data['departments'] = $this->getdepartments();
+            $this->view('admin/addStaff', $data);
         }
     }
 

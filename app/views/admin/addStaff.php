@@ -31,19 +31,25 @@
                                 <span class="invalid-feedback"></span>
                             </div>
                             <div class="form-group">
-                                <label for="email">Name <sup>*</sup></label>
-                                <input type="text" name="name" class="form-control form-control-lg <?= (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="">
+                                <label for="email">Email <sup>*</sup></label>
+                                <input type="text" name="email" class="form-control form-control-lg <?= (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" value="">
                                 <span class="invalid-feedback"></span>
                             </div>
                             <div class="form-group">
-                                <label for="password">Course: <sup>*</sup></label>
-                                <input type="text" name="course" class="form-control form-control-lg " value="">
+                                <label for="password">Password: <sup>*</sup></label>
+                                <input type="password" name="password" class="form-control form-control-lg " value="">
                                 <span class="invalid-feedback"><?= $data['password_err']; ?></span>
                             </div>
                             <div class="form-group">
                                 <label for="name">Department: <sup>*</sup></label>
-                                <input type="text" name="confirm_password" class="form-control form-control-lg " value="">
-                                <span class="invalid-feedback"><?= $data['confirm_password_err']; ?></span>
+                                <select name="department_id" class="form-control form-control-lg ">
+
+                                    <?php foreach ($data['departments'] as $department) : ?>
+                                        <option value="<?= $department->id ?>"><?= $department->name ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <!-- <input type="text" name="confirm_password" class="form-control form-control-lg " value="">
+                                <span class="invalid-feedback"><?= $data['confirm_password_err']; ?></span> -->
                             </div>
 
 
