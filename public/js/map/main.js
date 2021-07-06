@@ -58,7 +58,7 @@
     var pusher = new Pusher('9a3f71f9e4863b13493f', {
         cluster: 'eu',
         encrypted: true,
-        authEndpoint: "pusher/auth"
+        authEndpoint: "pusher/index"
     
     
         // auth: {
