@@ -44,7 +44,7 @@
                                                     <td><?= date('Y') ?></td>
                                                     <td>
                                                         <!-- <div class="row"> -->
-                                                        <a href="<?= URLROOT; ?>/parent/attendance/<?= $attendance->id ?>" class="btn btn-primary">View</a>
+                                                        <a href="<?= URLROOT; ?>/parents/attendance/<?= $attendance->id ?>" class="btn btn-primary">View</a>
 
                                                         <!-- </div> -->
 
