@@ -11,6 +11,7 @@ class Parents extends Controller
         $this->testModel = $this->model('Test');
         $this->courseModel = $this->model('Course');
         $this->departmentModel = $this->model('Department');
+        $this->guardianModel = $this->model('Guardian');
     }
 
     public function Index()
