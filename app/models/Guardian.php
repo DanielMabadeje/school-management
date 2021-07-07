@@ -23,10 +23,7 @@ class Guardian
 
 
         $row = $this->db->single();
-        // $row = $this->db->resultSet();
 
-        // var_dump($row);
-        // die;
         return $row->student_id;
     }
 }

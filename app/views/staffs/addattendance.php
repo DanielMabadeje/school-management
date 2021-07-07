@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Week <sup>*</sup></label>
-                            <input type="text" name="week" class="form-control form-control-lg " value="">
+                            <input type="date" name="week" class="form-control form-control-lg " value="">
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
