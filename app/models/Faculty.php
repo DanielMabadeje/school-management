@@ -17,7 +17,7 @@ class Faculty
 
     public function getFaculty()
     {
-        $this->db->query("SELECT * FROM departments");
+        $this->db->query("SELECT * FROM faculty");
         return $this->db->resultSet();
     }
 }

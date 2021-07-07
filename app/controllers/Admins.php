@@ -21,6 +21,7 @@ class Admins extends Controller
         $this->testModel = $this->model('Test');
         $this->courseModel = $this->model('Course');
         $this->departmentModel = $this->model('Department');
+        $this->facultyModel = $this->model('Faculty');
     }
     public function Index()
     {
@@ -64,6 +65,7 @@ class Admins extends Controller
             $data = [];
             $data['courses'] = $this->getCourses();
             $data['departments'] = $this->getdepartments();
+            $data['faculties'] = $this->getFaculties();
             $this->view('admin/addStudent', $data);
         }
     }
@@ -223,7 +225,7 @@ class Admins extends Controller
 
     private function getFaculties()
     {
-        $data = $this->departmentModel->getDepartment();
+        $data = $this->facultyModel->getFaculty();
         return $data;
     }
 }
