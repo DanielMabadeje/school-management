@@ -7,7 +7,7 @@
 
 
         <div class="header-side pt-5 mt-5">
-            <h1 class="display-4">Add Test</h1>
+            <h1 class="display-4">Update GPA</h1>
 
             <hr>
         </div>
@@ -20,7 +20,7 @@
             <div class="card ">
 
                 <div class="card-header pt-0 pb-0 bg-other-faint">
-                    <h4>Add Test</h4>
+                    <h4>Update GPA</h4>
                 </div>
                 <div class="card-body p-0">
                     <div class="form p-5">
