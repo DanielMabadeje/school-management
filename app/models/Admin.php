@@ -26,7 +26,8 @@ class Admin
         $this->db->bind(':groupId', $data['groupId']);
 
         if ($this->db->execute()) {
-            return true;
+            $user_id = $this->db->lastId();
+            return $user_id;
         } else {
             return false;
         }
@@ -34,9 +35,15 @@ class Admin
     public function addStaff($data)
     {
 
-        $this->addUser($data);
+        $user_id = $this->addUser($data);
         $this->db->query('INSERT INTO staffs (user_id, department_id) VALUES(:user_id, :department_id)');
-        $this->db->bind(':username', $data['username']);
-        $this->db->bind(':email', $data['email']);
+        $this->db->bind(':user_id', $user_id);
+        $this->db->bind(':department_id', $data['department_id']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
