@@ -62,4 +62,19 @@ class Admin
             return false;
         }
     }
+
+    public function addStudentProfile($data)
+    {
+        $this->db->query('INSERT INTO student (user_id, regNo, name) VALUES(:user_id, :regno, :name)');
+        $this->db->bind(':user_id', $user_id);
+        $this->db->bind(':regno', $data['regno']);
+        $this->db->bind(':name', $data['name']);
+
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
