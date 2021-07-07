@@ -11,12 +11,13 @@ class Pages extends Controller
     {
         $this->userModel = $this->model('User');
         $this->studentModel = $this->model('Student');
+        $this->guardianModel = $this->model('Guardian');
     }
     public function about()
     {
         $data = [
             'title' => 'About',
-            'description' => "App to share posts"
+            'description' => "App For Ritman University"
         ];
         $this->view('pages/about', $data);
     }

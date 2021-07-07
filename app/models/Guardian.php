@@ -14,4 +14,11 @@ class Guardian
     {
         $this->db = new Database;
     }
+
+    public function getStudentByParent($parent_id)
+    {
+        $this->db->query("SELECT * FROM guardians WHERE parent_id=$parent_id");
+
+        return $this->db->single();
+    }
 }
