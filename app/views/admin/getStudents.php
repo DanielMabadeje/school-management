@@ -19,6 +19,7 @@
                                     <th> Status </th>
                                     <th> Course</th>
                                     <th> Academic Year</th>
+                                    <th> Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -30,6 +31,7 @@
                                         <td>Student</td>
                                         <td><?= $student->department ?></td>
                                         <td><?= date('Y') ?></td>
+                                        <td><a href="<?= URLROOT ?>/admins/updateGPA/<?= $student->user_id ?>" class="btn bg-other text-white">Update GPA</a></td>
                                     </tr>
 
                                 <?php endforeach; ?>

@@ -92,9 +92,11 @@ class Admins extends Controller
         }
     }
 
-    public function getAllStudents()
+    public function students()
     {
-        # code...
+
+        $data['students'] = $this->getStudents();
+        $this->view("admin/getStudents", $data);
     }
 
     public function updategpa($student_id)
