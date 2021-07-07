@@ -65,7 +65,7 @@
                                     <table class="table text-left">
                                         <thead>
                                             <tr class="bg-light text-dark">
-                                                <th> Name </th>
+                                                <!-- <th> Name </th> -->
                                                 <th> Reg No</th>
                                                 <!-- <th> Week </th> -->
                                                 <th> Course</th>
@@ -80,7 +80,7 @@
 
                                                 <tr>
                                                     <!-- <td><?= $attendance->name ?></td> -->
-                                                    <td></td>
+                                                    <!-- <td></td> -->
                                                     <td><?= $attendance->student_reg_no ?></td>
                                                     <!-- <td>Student</td> -->
                                                     <td><?= $data['current_attendance']->course_name->name ?></td>
