@@ -74,6 +74,14 @@ class Admins extends Controller
             ];
 
             $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+
+            if ($this->adminModel->addStudent($data)) {
+                flash('add_exam_success', 'Student Added successfully');
+                redirect('/');
+            } else {
+                # code...
+            }
         } else {
 
             $data = [];
