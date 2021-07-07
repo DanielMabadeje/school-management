@@ -19,7 +19,13 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Course <sup>*</sup></label>
-                            <input type="text" name="course" class="form-control form-control-lg " value="">
+                            <!-- <input type="text" name="course" class="form-control form-control-lg " value=""> -->
+                            <select name="course" class="form-control form-control-lg ">
+
+                                <?php foreach ($data['courses'] as $department) : ?>
+                                    <option value="<?= $department->id ?>"><?= $department->name ?></option>
+                                <?php endforeach; ?>
+                            </select>
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">

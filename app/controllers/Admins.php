@@ -92,6 +92,16 @@ class Admins extends Controller
         }
     }
 
+    public function getAllStudents()
+    {
+        # code...
+    }
+
+    public function updategpa($student_id)
+    {
+        # code...
+    }
+
     public function addTest()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {

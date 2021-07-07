@@ -149,7 +149,9 @@ class Staffs extends Controller
                 # code...
             }
         } else {
-            $this->view('staffs/addattendance');
+
+            $data['courses'] = $this->getCourses();
+            $this->view('staffs/addattendance', $data);
         }
     }
 
