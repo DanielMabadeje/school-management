@@ -99,7 +99,19 @@ class Admins extends Controller
 
     public function updategpa($student_id)
     {
-        # code...
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $data = [
+                "student_id" => $student_id,
+                "gpa" => $_POST['gpa']
+            ];
+            if ($this->adminModel->editStudentGPA($data)) {
+                redirect("/");
+            } else {
+                # code...
+            }
+        } else {
+            $this->view("admin/updateGPA");
+        }
     }
 
     public function addTest()
