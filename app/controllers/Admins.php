@@ -59,7 +59,17 @@ class Admins extends Controller
     public function addStudent()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            # code...
+            $data = [
+                'name' => trim($_POST['name']),
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['password']),
+                'department_id' => trim($_POST['department_id']),
+                'memberId' => "student",
+                'groupId' => 2,
+                'isApproved' => 1
+            ];
+
+            $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
         } else {
 
             $data = [];
