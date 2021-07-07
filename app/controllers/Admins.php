@@ -220,4 +220,10 @@ class Admins extends Controller
         $data = $this->departmentModel->getDepartment();
         return $data;
     }
+
+    private function getFaculties()
+    {
+        $data = $this->departmentModel->getDepartment();
+        return $data;
+    }
 }
