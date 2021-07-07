@@ -19,7 +19,7 @@ class Parents extends Controller
     public function Index()
     {
         $this->checkIfParentIsLoggedIn();
-        $this->view('students/index');
+        $this->view('parent/index');
     }
 
     public function courses($course_id = null)
@@ -29,7 +29,7 @@ class Parents extends Controller
             $user = $this->getProfile($this->student_id);
             $courses = $this->studentModel->getCourses($user->level);
             $data['courses'] = $courses;
-            $this->view('students/courses', $data);
+            $this->view('parent/courses', $data);
         } else {
             # code...
         }
@@ -41,9 +41,9 @@ class Parents extends Controller
         if (is_null($exam_id)) {
 
             $data['exam'] = $this->examModel->getExams();
-            $this->view('students/exams', $data);
+            $this->view('parent/exams', $data);
         } else {
-            $this->view('students/testview');
+            $this->view('parent/testview');
         }
     }
 
@@ -52,9 +52,9 @@ class Parents extends Controller
         if (is_null($test_id)) {
 
             $data['test'] = $this->testModel->getTests();
-            $this->view('students/test', $data);
+            $this->view('parent/test', $data);
         } else {
-            $this->view('students/testview');
+            $this->view('parent/testview');
         }
     }
 
@@ -70,14 +70,14 @@ class Parents extends Controller
             // var_dump($students);
             // die;
             $data['students'] = $students;
-            $this->view('students/students', $data);
+            $this->view('parent/students', $data);
         } else {
             // $user = $this->getProfile($_SESSION['user_id']);
             $students = $this->studentModel->getAllStudents();
             // var_dump($students);
             // die;
             $data['students'] = $students;
-            $this->view('students/students', $data);
+            $this->view('parent/students', $data);
         }
     }
 
@@ -90,7 +90,7 @@ class Parents extends Controller
         if (is_null($attendance_id)) {
             $data['attendance'] = $this->attendanceModel->getAttendance();
 
-            $this->view('students/attendance', $data);
+            $this->view('parent/attendance', $data);
         } else {
 
             $data['attendance_id'] = $attendance_id;
@@ -98,7 +98,7 @@ class Parents extends Controller
             $data['current_attendance'] = $this->attendanceModel->getAttendanceById($attendance_id);
             $data['current_attendance']->course_name = $this->getCourseById($data['current_attendance']->course_id);
             $data['students'] = $this->getStudents();
-            $this->view('students/attendanceview', $data);
+            $this->view('parent/attendanceview', $data);
         }
     }
 
