@@ -128,7 +128,9 @@ class Admins extends Controller
                 'isApproved' => 1
             ];
 
+            $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
             if ($this->adminModel->addStaff($data)) {
+                flash('add_exam_success', 'Staff Added successfully');
                 redirect('/');
             } else {
                 # code...
