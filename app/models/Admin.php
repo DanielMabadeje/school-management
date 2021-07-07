@@ -86,8 +86,17 @@ class Admin
         }
     }
 
-    public function editStudentGPA($student_id)
+    public function editStudentGPA($data)
     {
-        # code...
+        $this->db->query('UPDATE students_profile set gpa=:gpa WHERE student_id=:user_id');
+        $this->db->bind(':user_id', $data['student_id']);
+        $this->db->bind(':gpa', $data['gpa']);
+
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
