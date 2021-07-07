@@ -101,6 +101,14 @@ class Parents extends Controller
             $this->view('parent/attendanceview', $data);
         }
     }
+    public function gpa()
+    {
+        $profile = $this->studentModel->getStudentProfile($_SESSION['user_id']);
+        $data['gpa'] = $profile->gpa;
+
+        $this->view("students/gpa", $data);
+    }
+
 
 
     public function register()
