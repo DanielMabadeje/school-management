@@ -32,6 +32,10 @@ class Students extends Controller
         }
     }
 
+    public function gpa()
+    {
+        # code...
+    }
 
     public function exams($exam_id = null)
     {
