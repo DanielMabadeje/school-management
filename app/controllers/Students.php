@@ -34,7 +34,10 @@ class Students extends Controller
 
     public function gpa()
     {
-        # code...
+        $profile = $this->studentModel->getStudentProfile($_SESSION['user_id']);
+        $data['gpa'] = $profile->gpa;
+
+        $this->view("students/gpa", $data);
     }
 
     public function exams($exam_id = null)

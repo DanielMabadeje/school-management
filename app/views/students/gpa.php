@@ -17,6 +17,7 @@
 
         <div class="bg-white mt-5 pt-5">
 
+            <h2>GPA : <?= $data['gpa'] ?></h2>
         </div>
 
     </main>
