@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 03, 2021 at 06:49 PM
+-- Generation Time: Jul 07, 2021 at 09:15 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.11
 
@@ -42,7 +42,8 @@ CREATE TABLE `attendance` (
 --
 
 INSERT INTO `attendance` (`id`, `course_id`, `name`, `week`, `created_at`, `updated_at`) VALUES
-(1, 1, 'PHY 111 Attendance', '1', '2021-06-19 19:16:09', '2021-06-19 19:16:09');
+(1, 1, 'PHY 111 Attendance', '2021-07-03', '2021-06-19 19:16:09', '2021-07-07 20:18:05'),
+(2, 1, 'MTH 111 Attendance', '2021-07-03', '2021-07-07 20:17:36', '2021-07-07 20:17:36');
 
 -- --------------------------------------------------------
 
@@ -63,7 +64,9 @@ CREATE TABLE `attendance_list` (
 --
 
 INSERT INTO `attendance_list` (`id`, `attendance_id`, `student_reg_no`, `created_at`, `updated_at`) VALUES
-(1, '1', '12345', '2021-06-20 17:04:02', '2021-06-20 17:04:02');
+(1, '1', '12345', '2021-06-20 17:04:02', '2021-06-20 17:04:02'),
+(2, '2', '12345', '2021-07-07 20:19:04', '2021-07-07 20:19:04'),
+(3, '2', '3894', '2021-07-07 20:19:04', '2021-07-07 20:19:04');
 
 -- --------------------------------------------------------
 
@@ -169,6 +172,27 @@ INSERT INTO `faculties` (`id`, `name`, `description`, `created_at`, `updated_at`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `guardians`
+--
+
+CREATE TABLE `guardians` (
+  `id` int(30) NOT NULL,
+  `student_id` int(30) NOT NULL,
+  `parent_id` int(30) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `guardians`
+--
+
+INSERT INTO `guardians` (`id`, `student_id`, `parent_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 6, '2021-07-07 19:59:09', '2021-07-07 19:59:09');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `membership_groups`
 --
 
@@ -189,7 +213,8 @@ CREATE TABLE `membership_groups` (
 INSERT INTO `membership_groups` (`groupId`, `name`, `description`, `allowSignup`, `needsApproval`, `created_at`, `updated_at`) VALUES
 (1, 'Admin', 'admin', '0', '0', '2021-06-09 19:58:04', '2021-06-09 19:58:04'),
 (2, 'student', 'A student', '0', '0', '2021-06-13 19:35:29', '2021-06-13 19:35:29'),
-(3, 'staff', 'A staff', '0', '0', '2021-06-13 19:35:46', '2021-06-13 19:35:46');
+(3, 'staff', 'A staff', '0', '0', '2021-06-13 19:35:46', '2021-06-13 19:35:46'),
+(4, 'parent', 'A parent', '0', '0', '2021-07-04 14:25:23', '2021-07-04 14:25:23');
 
 -- --------------------------------------------------------
 
@@ -211,7 +236,8 @@ CREATE TABLE `staffs` (
 --
 
 INSERT INTO `staffs` (`id`, `user_id`, `department_id`, `course_id`, `created_at`, `updated_at`) VALUES
-(1, 3, 3, NULL, '2021-06-13 19:34:37', '2021-06-13 19:34:37');
+(1, 3, 3, NULL, '2021-06-13 19:34:37', '2021-06-13 19:34:37'),
+(3, 11, 1, NULL, '2021-07-07 15:31:03', '2021-07-07 15:31:03');
 
 -- --------------------------------------------------------
 
@@ -235,7 +261,8 @@ CREATE TABLE `students` (
 INSERT INTO `students` (`id`, `user_id`, `regNo`, `name`, `created_at`, `updated_at`) VALUES
 (1, 1, '12345', 'Daniel', '2021-06-09 20:34:24', '2021-06-09 20:34:24'),
 (4, 4, '23456', 'Richard', '2021-06-20 18:22:54', '2021-06-20 18:22:54'),
-(5, 5, '34567', 'Michael', '2021-06-20 18:22:54', '2021-06-20 18:22:54');
+(5, 5, '34567', 'Michael', '2021-06-20 18:22:54', '2021-06-20 18:22:54'),
+(7, 14, '3894', 'New Student', '2021-07-07 16:40:18', '2021-07-07 16:40:18');
 
 -- --------------------------------------------------------
 
@@ -262,9 +289,10 @@ CREATE TABLE `students_profile` (
 --
 
 INSERT INTO `students_profile` (`id`, `user_id`, `reg_no`, `faculty_id`, `department_id`, `level`, `paid_fees`, `paid_hostel_fees`, `gpa`, `created_at`, `updated_at`) VALUES
-(1, 1, '12345', '1', '1', '100', 'true', 'false', '5.0', '2021-06-11 19:22:16', '2021-06-12 19:51:52'),
+(1, 1, '12345', '1', '1', '100', 'true', 'false', '5.0', '2021-06-11 19:22:16', '2021-07-07 21:09:53'),
 (2, 4, '23456', '2', '2', '100', 'true', 'false', '', '2021-06-20 18:26:03', '2021-06-20 18:26:03'),
-(3, 5, '34567', '3', '3', '200', 'true', 'false', '', '2021-06-20 18:26:03', '2021-06-20 18:26:03');
+(3, 5, '34567', '3', '3', '200', 'true', 'false', '', '2021-06-20 18:26:03', '2021-06-20 18:26:03'),
+(4, 14, '3894', '1', '1', '100', 'true', 'false', '4', '2021-07-07 16:40:18', '2021-07-07 16:40:18');
 
 -- --------------------------------------------------------
 
@@ -339,7 +367,10 @@ INSERT INTO `users` (`id`, `memberId`, `password`, `username`, `email`, `groupId
 (2, 'admin', '$2y$10$8uOzZzPNbTmWqXa1EcWfK.ibbCo29IFsA7w0WYsnsUesz4kKywade', NULL, 'admin@admin.com', '1', '0', '1', '2021-06-10 18:55:54', '2021-06-30 11:28:30'),
 (3, 'staff', '$2y$10$8uOzZzPNbTmWqXa1EcWfK.ibbCo29IFsA7w0WYsnsUesz4kKywade', 'staff', 'staff@email.com', '3', '0', '1', '2021-06-13 19:33:11', '2021-06-30 11:28:57'),
 (4, 'student', '$2y$10$7v4qBlBqevuDlAXVUkqnuewNKz9/haE2V9KltORC1px9UWfunIl6G', 'Richard', 'richard@gmail.com', '2', '0', '1', '2021-06-20 18:22:36', '2021-06-20 18:22:36'),
-(5, 'student', '$2y$10$7v4qBlBqevuDlAXVUkqnuewNKz9/haE2V9KltORC1px9UWfunIl6G', 'Michael', 'michael@gmail.com', '2', '0', '1', '2021-06-20 18:22:36', '2021-06-20 18:22:36');
+(5, 'student', '$2y$10$7v4qBlBqevuDlAXVUkqnuewNKz9/haE2V9KltORC1px9UWfunIl6G', 'Michael', 'michael@gmail.com', '2', '0', '1', '2021-06-20 18:22:36', '2021-06-20 18:22:36'),
+(6, 'parent', '$2y$10$8uOzZzPNbTmWqXa1EcWfK.ibbCo29IFsA7w0WYsnsUesz4kKywade', 'parent', 'parent@email.com', '4', '0', '1', '2021-07-04 14:27:13', '2021-07-04 14:34:06'),
+(11, 'staff', '$2y$10$wTkjxnASYL5zwnVBui7Ye.H3pC2BKfiUhMAm6FnuGos9KABD29DIG', 'Staff 2', 'newStaff@gmail.com', '3', '0', '1', '2021-07-07 15:31:03', '2021-07-07 15:31:03'),
+(14, 'student', '$2y$10$Wgu8B3WQwB9Kas0hcWoviO/xHHYTCXXrpD6r1hEU/qVccpSH3KKw6', 'New Student', 'newStudent@gmail.com', '2', '0', '1', '2021-07-07 16:40:18', '2021-07-07 16:40:18');
 
 --
 -- Indexes for dumped tables
@@ -379,6 +410,12 @@ ALTER TABLE `exams`
 -- Indexes for table `faculties`
 --
 ALTER TABLE `faculties`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `guardians`
+--
+ALTER TABLE `guardians`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -433,13 +470,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `attendance_list`
 --
 ALTER TABLE `attendance_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `courses`
@@ -466,28 +503,34 @@ ALTER TABLE `faculties`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `guardians`
+--
+ALTER TABLE `guardians`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `membership_groups`
 --
 ALTER TABLE `membership_groups`
-  MODIFY `groupId` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `groupId` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `staffs`
 --
 ALTER TABLE `staffs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `students_profile`
 --
 ALTER TABLE `students_profile`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `student_courses`
@@ -505,7 +548,7 @@ ALTER TABLE `tests`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
