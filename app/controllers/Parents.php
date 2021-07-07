@@ -12,6 +12,8 @@ class Parents extends Controller
         $this->courseModel = $this->model('Course');
         $this->departmentModel = $this->model('Department');
         $this->guardianModel = $this->model('Guardian');
+
+        $this->student_id = $this->guardianModel->getStudentByParent($_SESSION['user_id']);
     }
 
     public function Index()
@@ -24,7 +26,7 @@ class Parents extends Controller
     {
         $this->checkIfParentIsLoggedIn();
         if (is_null($course_id)) {
-            $user = $this->getProfile($_SESSION['user_id']);
+            $user = $this->getProfile($this->student_id);
             $courses = $this->studentModel->getCourses($user->level);
             $data['courses'] = $courses;
             $this->view('students/courses', $data);
@@ -63,7 +65,7 @@ class Parents extends Controller
 
 
         if (isset($_GET['byfaculty']) && $_GET['byfaculty'] == "true") {
-            $user = $this->getProfile($_SESSION['user_id']);
+            $user = $this->getProfile($this->student_id);
             $students = $this->studentModel->getStudentsByFaculty($user->faculty_id);
             // var_dump($students);
             // die;
@@ -83,7 +85,7 @@ class Parents extends Controller
     public function attendance($attendance_id = null)
     {
         $this->checkIfParentIsLoggedIn();
-        $user = $this->getProfile($_SESSION['user_id']);
+        $user = $this->getProfile($this->student_id);
 
         if (is_null($attendance_id)) {
             $data['attendance'] = $this->attendanceModel->getAttendance();
