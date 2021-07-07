@@ -33,5 +33,10 @@ class Admin
     }
     public function addStaff($data)
     {
+
+        $this->addUser($data);
+        $this->db->query('INSERT INTO staffs (user_id, department_id) VALUES(:user_id, :department_id)');
+        $this->db->bind(':username', $data['username']);
+        $this->db->bind(':email', $data['email']);
     }
 }
