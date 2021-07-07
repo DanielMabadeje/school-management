@@ -41,6 +41,16 @@
                                 <span class="invalid-feedback"><?= $data['password_err']; ?></span>
                             </div>
                             <div class="form-group">
+                                <label for="name">Faculty: <sup>*</sup></label>
+                                <select name="faculty_id" class="form-control form-control-lg ">
+
+                                    <?php foreach ($data['faculties'] as $faculty) : ?>
+                                        <option value="<?= $faculty->id ?>"><?= $faculty->name ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="name">Department: <sup>*</sup></label>
                                 <select name="department_id" class="form-control form-control-lg ">
 
