@@ -85,4 +85,9 @@ class Admin
             return false;
         }
     }
+
+    public function editStudentGPA($student_id)
+    {
+        # code...
+    }
 }
