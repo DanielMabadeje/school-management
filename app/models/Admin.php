@@ -18,8 +18,8 @@ class Admin
 
     public function addUser($data)
     {
-        $this->db->query('INSERT INTO users (memberId, username, email, password, groupId) VALUES(:email, :password)');
-        $this->db->bind(':username', $data['username']);
+        $this->db->query('INSERT INTO users (memberId, username, email, password, groupId) VALUES(:memberId, :username, :email, :password, :groupId)');
+        $this->db->bind(':username', $data['name']);
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
         $this->db->bind(':memberId', $data['memberId']);

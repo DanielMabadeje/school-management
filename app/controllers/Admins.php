@@ -122,13 +122,13 @@ class Admins extends Controller
                 'name' => trim($_POST['name']),
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
-                'department_id' => trim($_POST['department']),
+                'department_id' => trim($_POST['department_id']),
                 'memberId' => "staff",
                 'groupId' => 3,
                 'isApproved' => 1
             ];
 
-            if ($this->examModel->addExam($data)) {
+            if ($this->adminModel->addStaff($data)) {
                 redirect('/');
             } else {
                 # code...
