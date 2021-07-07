@@ -60,7 +60,11 @@ class Admins extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             # code...
         } else {
-            $this->view('admin/addStudent');
+
+            $data = [];
+            $data['courses'] = $this->getCourses();
+            $data['departments'] = $this->getdepartments();
+            $this->view('admin/addStudent', $data);
         }
     }
 
