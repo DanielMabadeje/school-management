@@ -73,7 +73,7 @@
 
                             <div class="form-group">
                                 <label for="name">Level: <sup>*</sup></label>
-                                <input type="text" name="confirm_password" class="form-control form-control-lg " value="">
+                                <input type="text" name="level" class="form-control form-control-lg " value="">
                                 <span class="invalid-feedback"><?= $data['confirm_password_err']; ?></span>
                             </div>
 
