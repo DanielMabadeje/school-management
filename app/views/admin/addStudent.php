@@ -80,8 +80,8 @@
 
                             <div class="form-group">
                                 <label for="name">GPA: <sup>*</sup></label>
-                                <input type="text" name="confirm_password" class="form-control form-control-lg " value="">
-                                <span class="invalid-feedback"><?= $data['confirm_password_err']; ?></span>
+                                <input type="text" name="gpa" class="form-control form-control-lg " value="">
+                                <span class="invalid-feedback"><?= $data['gpa']; ?></span>
                             </div>
 
 

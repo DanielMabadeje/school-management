@@ -50,9 +50,11 @@ class Admin
     public function addStudent($data)
     {
         $user_id = $this->addUser($data);
-        $this->db->query('INSERT INTO staffs (user_id, department_id) VALUES(:user_id, :department_id)');
+        $this->db->query('INSERT INTO student (user_id, regNo, name) VALUES(:user_id, :regno, :name)');
         $this->db->bind(':user_id', $user_id);
-        $this->db->bind(':department_id', $data['department_id']);
+        $this->db->bind(':regno', $data['regno']);
+        $this->db->bind(':name', $data['name']);
+
 
         if ($this->db->execute()) {
             return true;

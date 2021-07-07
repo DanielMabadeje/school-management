@@ -61,9 +61,13 @@ class Admins extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data = [
                 'name' => trim($_POST['name']),
+                'regno' => trim($_POST['regno']),
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
+                'faculty_id' => trim($_POST['faculty_id']),
                 'department_id' => trim($_POST['department_id']),
+                'level' => trim($_POST['level']),
+                'gpa' => trim($_POST['gpa']),
                 'memberId' => "student",
                 'groupId' => 2,
                 'isApproved' => 1
