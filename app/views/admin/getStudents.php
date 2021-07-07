@@ -2,18 +2,48 @@
 
 
 <section class="container">
-    <section class="exams col-md-12 mt-5 pt-5">
+    <section class=" col-md-12 mt-5 pt-5">
 
         <h2 class="display-4">All Students</h2>
 
-        <section class="row pt-5">
-            <?php foreach ($data['students'] as $students) : ?>
-                <div class="col-md-4">
-                    <div class="card"><?= $exam->name ?></div>
+        <div class="mt-5 pt-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title mb-0">Students</div>
+                    <div class="table-responsive">
+                        <table class="table text-left">
+                            <thead>
+                                <tr class="bg-light text-dark">
+                                    <th> Name </th>
+                                    <th> Reg No </th>
+                                    <th> Status </th>
+                                    <th> Course</th>
+                                    <th> Academic Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <?php foreach ($data['students'] as $student) : ?>
+                                    <tr>
+                                        <td><?= $student->name ?></td>
+                                        <td><?= $student->reg_no ?></td>
+                                        <td>Student</td>
+                                        <td><?= $student->department ?></td>
+                                        <td><?= date('Y') ?></td>
+                                    </tr>
+
+                                <?php endforeach; ?>
+
+                    </div>
+
+
+                    </tbody>
+                    </table>
                 </div>
-            <?php endforeach; ?>
-        </section>
+            </div>
+        </div>
     </section>
+</section>
 </section>
 
 
