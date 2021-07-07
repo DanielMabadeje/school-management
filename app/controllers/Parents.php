@@ -103,7 +103,7 @@ class Parents extends Controller
     }
     public function gpa()
     {
-        $profile = $this->studentModel->getStudentProfile($_SESSION['user_id']);
+        $profile = $this->studentModel->getStudentProfile($this->student_id);
         $data['gpa'] = $profile->gpa;
 
         $this->view("students/gpa", $data);
