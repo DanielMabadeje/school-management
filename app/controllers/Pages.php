@@ -39,6 +39,10 @@ class Pages extends Controller
                     redirect('admins');
                     break;
 
+                case 'parent':
+                    redirect('parents');
+                    break;
+
                 default:
                     # code...
                     break;
