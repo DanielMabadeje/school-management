@@ -54,7 +54,7 @@
 
 
                             <div class="form-group">
-                                <input type="submit" value="Add Exam" class="btn btn-primary btn-block col-6 p-3">
+                                <input type="submit" value="Add Staff" class="btn btn-primary btn-block col-6 p-3">
                             </div>
 
 
