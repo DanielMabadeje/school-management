@@ -20,8 +20,8 @@
                     <li class="prev">&#10094;</li>
                     <li class="next">&#10095;</li>
                     <li>
-                        August<br>
-                        <span style="font-size:18px">2016</span>
+                        July<br>
+                        <span style="font-size:18px"><?= date("Y") ?></span>
                     </li>
                 </ul>
             </div>
@@ -45,8 +45,8 @@
                 <li>6</li>
                 <li>7</li>
                 <li>8</li>
-                <li>9</li>
-                <li><span class="active">10</span></li>
+                <li><span class="active">9</span></li>
+                <li><span>10</span></li>
                 <li>11</li>
                 <li>12</li>
                 <li>13</li>
