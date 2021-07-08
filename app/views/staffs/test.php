@@ -42,8 +42,8 @@
                                                     <td><?= $test->date ?></td>
                                                     <td><?= $test->time ?></td>
                                                     <td>
-                                                        <a href="" class="btn bg-other text-white">Edit</a>
-                                                        <a href="" class="btn btn-danger">Delete</a>
+                                                        <!-- <a href="" class="btn bg-other text-white">Edit</a>
+                                                        <a href="" class="btn btn-danger">Delete</a> -->
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>
