@@ -15,11 +15,11 @@
 					<span>Home</span></a>
 			</li>
 
-			<li>
+			<!-- <li>
 				<a href="<?= URLROOT ?>staffs/faculty">
 					<span class="las la-users"></span>
 					<span>Faculty</span></a>
-			</li>
+			</li> -->
 
 			<li>
 				<a href="<?= URLROOT ?>staffs/students">
