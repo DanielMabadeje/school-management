@@ -41,13 +41,15 @@
                             <div class="form-group">
                                 <label for="password">Course: <sup>*</sup></label>
                                 <!-- <input type="text" name="course" class="form-control form-control-lg " value=""> -->
-                                ndforeach; ?>
-                                </select><select name="course" class="form-control form-control-lg ">
+                                
+                                <select name="course" class="form-control form-control-lg ">
 
                                     <?php foreach ($data['courses'] as $course) : ?>
                                         <option value="<?= $course->id ?>"><?= $course->name ?></option>
                                     <?php endforeach; ?>
                                     <span class="invalid-feedback"><?= $data['password_err']; ?></span>
+
+                                    </select>
                             </div>
                             <div class="form-group">
                                 <label for="name">Department: <sup>*</sup></label>

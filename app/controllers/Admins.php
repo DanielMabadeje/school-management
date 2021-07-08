@@ -149,7 +149,7 @@ class Admins extends Controller
                 'name' => $_POST['name'],
                 'description' => $_POST['description'],
                 'course_id' => $_POST['course'],
-                'department_id' => $_POST['department_id'],
+                'department_id' => $_POST['department'],
                 'date' => $_POST['date'],
                 'time' => $_POST['time'],
             ];
