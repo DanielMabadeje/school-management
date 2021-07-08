@@ -1,4 +1,5 @@
 (function () {
+  
     var username;
   
     // reference for DOM nodes
@@ -233,10 +234,11 @@
         // show the delivery hero's div now
         deliveryHeroBox.classList.remove('hidden');
     }
-  }());
+  }
+  ());
 
-  //  function addLocation(thisusername){
+   function addLocation(thisusername){
 
-  //     // alert(thisusername);
-  //     createMyLocationChannel(thisusername);
-  //   }
+      // alert(thisusername);
+      createMyLocationChannel(thisusername);
+    }
