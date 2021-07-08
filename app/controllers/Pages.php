@@ -99,13 +99,13 @@ class Pages extends Controller
 
 
                         flashfail('login_fail', 'Unable To Login');
-                        $this->view('users/login', $data);
+                        $this->view('pages/index', $data);
                     }
                     #..
                 } else {
                     //load view with errors
                     flashfail('login_fail', 'Unable To Login');
-                    $this->view('users/login', $data);
+                    $this->view('pages/index', $data);
                 }
             } else {
                 $data = [
@@ -154,6 +154,6 @@ class Pages extends Controller
         unset($_SESSION['user_email']);
         unset($_SESSION['user_name']);
         session_destroy();
-        redirect('users/login');
+        redirect('/');
     }
 }
