@@ -233,12 +233,12 @@ class Students extends Controller
                 } else {
                     $data['password_err'] = 'Password Incorrect';
 
-                    $this->view('users/login', $data);
+                    $this->view('pages/index', $data);
                 }
                 #..
             } else {
                 //load view with errors
-                $this->view('users/login', $data);
+                $this->view('pages/index', $data);
             }
             #..
         } else {
