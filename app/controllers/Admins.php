@@ -35,6 +35,10 @@ class Admins extends Controller
         $this->view('admin/index', $data);
     }
 
+    public function viewStudent($id)
+    {
+        // $this->view("");
+    }
 
     public function addCourse()
     {

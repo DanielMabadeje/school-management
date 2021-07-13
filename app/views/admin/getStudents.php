@@ -31,7 +31,10 @@
                                         <td>Student</td>
                                         <td><?= $student->department ?></td>
                                         <td><?= date('Y') ?></td>
-                                        <td><a href="<?= URLROOT ?>/admins/updateGPA/<?= $student->user_id ?>" class="btn bg-other text-white">Update GPA</a></td>
+                                        <td>
+                                            <a href="<?= URLROOT ?>/admins/viewStudent/<?= $student->user_id ?>" class="btn btn-primary text-white">View Student</a>
+                                            <a href="<?= URLROOT ?>/admins/updateGPA/<?= $student->user_id ?>" class="btn bg-other text-white">Update GPA</a>
+                                        </td>
                                     </tr>
 
                                 <?php endforeach; ?>
