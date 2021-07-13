@@ -40,6 +40,15 @@ class Admins extends Controller
         // $this->view("");
     }
 
+    public function addParent()
+    {
+        if ($_SERVER['REQUEST_METHOD']=="POST") {
+            # code...
+        } else {
+            $this->view("admins/addParent");
+        }
+    }
+
     public function addCourse()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
