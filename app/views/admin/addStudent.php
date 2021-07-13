@@ -84,6 +84,18 @@
                                 <span class="invalid-feedback"><?= $data['gpa']; ?></span>
                             </div>
 
+                            <div class="form-group">
+                                <label for="name">Paid Fees: <sup>*</sup></label>
+                                <input type="text" name="paid_fees" class="form-control form-control-lg " value="">
+                                <span class="invalid-feedback"><?= $data['gpa']; ?></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Hostel: <sup>*</sup></label>
+                                <input type="text" name="hostel" class="form-control form-control-lg " value="">
+                                <span class="invalid-feedback"><?= $data['gpa']; ?></span>
+                            </div>
+
 
                             <div class="form-group">
                                 <input type="submit" value="Add Student" class="btn btn-primary btn-block col-6 p-3">
