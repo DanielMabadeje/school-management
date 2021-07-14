@@ -220,4 +220,41 @@ class Student
             return false;
         }
     }
+
+
+    public function updateScore($data)
+    {
+        $this->db->query("UPDATE
+        user_id=:user_id, reg_no=:reg_no, course_id=:course_id, level=:level, semester=:semester, score=:score WHERE user_id=:user_id AND course_id=:course_id");
+
+        $this->db->bind(":user_id", $data['user_id']);
+        $this->db->bind(":reg_no", $data['reg_no']);
+        $this->db->bind(":course_id", $data['course_id']);
+        $this->db->bind(":level", $data['level']);
+        $this->db->bind(":semester", $data['semester']);
+        $this->db->bind(":score", $data['score']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function selectScoreCourse($data)
+    {
+        $this->db->query("SELECT * FROM student_courses WHERE user_id=:user_id AND course_id=:course_id");
+        $this->db->bind(":user_id", $data['user_id']);
+        $this->db->bind(":course_id", $data['course_id']);
+
+        if ($result = $this->db->resultSet()) {
+            if (empty($result)) {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
 }
