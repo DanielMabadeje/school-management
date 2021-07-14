@@ -20,6 +20,13 @@
             <h2>GPA : <?= $data['gpa'] ?></h2>
         </div>
 
+        <div class="pt-5 card col-md-12 pb-5">
+            <?php foreach ($data['scores'] as $score) : ?>
+
+                <div class="card p-3"><?= $score->name ?>: <?= $score->score ?></div>
+            <?php endforeach; ?>
+        </div>
+
     </main>
 </div>
 <?php require APPROOT . '/views/students/inc/footer.php'; ?>
