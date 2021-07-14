@@ -202,9 +202,22 @@ class Student
 
     public function insertScore($data)
     {
-        $this->db->query("INSERT INTO student_courses (field1, field2, field3, ...) 
-        VALUES ('value1', 'value2','value3', ...)
+        $this->db->query("INSERT INTO student_courses (user_id, reg_no, course_id, level, semester, score) 
+        VALUES (:user_id, :reg_no,:course_id, :level, :semester, :score)
         ON DUPLICATE KEY UPDATE
-        field1='value1', field2='value2', field3='value3',");
+        user_id=:user_id, reg_no=:reg_no, course_id=:course_id, level=:level, semester=:semester, score=:score");
+
+        $this->db->bind(":user_id", $data['user_id']);
+        $this->db->bind(":reg_no", $data['reg_no']);
+        $this->db->bind(":course_id", $data['course_id']);
+        $this->db->bind(":level", $data['level']);
+        $this->db->bind(":semester", $data['semester']);
+        $this->db->bind(":score", $data['score']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
