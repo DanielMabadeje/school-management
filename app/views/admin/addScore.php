@@ -25,14 +25,15 @@
                 <div class="card-body p-0">
                     <div class="form p-5">
                         <form action="<?= URLROOT ?>/admins/addexam" method="post">
-                            <div class="form-group">
-                                <label for="name">Name <sup>*</sup></label>
-                                <input type="text" name="name" class="form-control form-control-lg" value="">
-                                <span class="invalid-feedback"></span>
-                            </div>
+
 
                             <?php foreach ($data['courses'] as $course) : ?>
-
+                                <div class="form-group">
+                                    <label for="name"><?= $course->name ?> <sup>*</sup></label>
+                                    <input type="hidden" name="course[]" value="<?= $course->id ?>">
+                                    <input type="text" name="score[]" class="form-control form-control-lg" value="" placeholder="Put in Student's score....">
+                                    <span class="invalid-feedback"></span>
+                                </div>
                             <?php endforeach; ?>
 
                             <div class="form-group">
