@@ -188,4 +188,12 @@ class Student
         $this->db->bind(":user_id", $id);
         return $this->db->single();
     }
+
+    public function getScores($id)
+    {
+        $this->db->query("SELECT * FROM students_courses WHERE user_id=:user_id");
+        $this->db->bind(":user_id", $id);
+
+        return $this->db->resultSet();
+    }
 }

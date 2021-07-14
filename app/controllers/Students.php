@@ -36,6 +36,7 @@ class Students extends Controller
     {
         $profile = $this->studentModel->getStudentProfile($_SESSION['user_id']);
         $data['gpa'] = $profile->gpa;
+        $data['scores'] = $this->studentModel->getScores($_SESSION['user_id']);
 
         $this->view("students/gpa", $data);
     }

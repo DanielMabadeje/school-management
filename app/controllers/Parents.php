@@ -104,6 +104,7 @@ class Parents extends Controller
     public function gpa()
     {
         $profile = $this->studentModel->getStudentProfile($this->student_id);
+        $data['scores'] = $this->studentModel->getScores($this->student_id);
         $data['gpa'] = $profile->gpa;
 
         $this->view("parent/gpa", $data);
