@@ -158,7 +158,19 @@ class Admins extends Controller
     public function addScore($user_id)
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            # code...
+            $student = $this->getStudentsProfile($user_id);
+            $data = [
+                "user_id" => $user_id,
+                "regno" => $student->reg_no,
+                "level" => $student->level,
+                "semester" => 1,
+            ];
+
+            foreach ($_POST['course'] as $key => $value) {
+                $data['course_id'] = $value;
+                $data['score'] = $_POST['score'][$key];
+                $this->studentModel->insertScore($data);
+            }
         } else {
 
 
