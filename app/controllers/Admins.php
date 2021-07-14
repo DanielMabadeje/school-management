@@ -169,7 +169,12 @@ class Admins extends Controller
             foreach ($_POST['course'] as $key => $value) {
                 $data['course_id'] = $value;
                 $data['score'] = $_POST['score'][$key];
-                $this->studentModel->insertScore($data);
+
+                if ($this->studentModel->selctScoreCourse($data)) {
+                    $this->studentModel->insertScore($data);
+                } else {
+                    $this->studentModel->updateScore($data);
+                }
             }
 
             redirect("admins/student");
