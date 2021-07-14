@@ -191,7 +191,10 @@ class Student
 
     public function getScores($id)
     {
-        $this->db->query("SELECT * FROM students_courses WHERE user_id=:user_id");
+        $this->db->query("SELECT student_courses.score, student_courses.course_id FROM student_courses
+                          INNER JOIN courses
+                          ON courses.id=student_courses.course_id
+                          WHERE user_id=:user_id");
         $this->db->bind(":user_id", $id);
 
         return $this->db->resultSet();
