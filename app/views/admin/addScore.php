@@ -24,7 +24,7 @@
                 </div>
                 <div class="card-body p-0">
                     <div class="form p-5">
-                        <form action="<?= URLROOT ?>/admins/addexam" method="post">
+                        <form action="<?= URLROOT ?>/admins/addscore/<?= $data['user_id'] ?>" method="post">
 
 
                             <?php foreach ($data['courses'] as $course) : ?>

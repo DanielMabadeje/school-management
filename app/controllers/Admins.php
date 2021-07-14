@@ -161,7 +161,7 @@ class Admins extends Controller
             $student = $this->getStudentsProfile($user_id);
             $data = [
                 "user_id" => $user_id,
-                "regno" => $student->reg_no,
+                "reg_no" => $student->reg_no,
                 "level" => $student->level,
                 "semester" => 1,
             ];
@@ -171,12 +171,15 @@ class Admins extends Controller
                 $data['score'] = $_POST['score'][$key];
                 $this->studentModel->insertScore($data);
             }
+
+            redirect("admins/student");
         } else {
 
 
             $data['student'] = $this->getStudentsProfile($user_id);
 
             $level = $data['student']->level;
+            $data['user_id'] = $user_id;
 
             $data['courses'] = $this->getCoursesByLevel($level);
             $this->view("admin/addScore", $data);
