@@ -40,7 +40,7 @@ class Admins extends Controller
 
         $student = $this->studentModel->getStudentByUserId($id);
 
-        $data['student']=$student;
+        $data['student'] = $student;
         $this->view("admin/viewStudent", $data);
     }
 
@@ -155,6 +155,14 @@ class Admins extends Controller
         }
     }
 
+    public function addScore($user_id)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            # code...
+        } else {
+            $this->view("admin/addScore");
+        }
+    }
     public function addTest()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {

@@ -22,7 +22,6 @@
 
         <div class="pt-5 card col-md-12 pb-5">
             <?php foreach ($data['scores'] as $score) : ?>
-
                 <div class="card p-3"><?= $score->name ?>: <?= $score->score ?></div>
             <?php endforeach; ?>
         </div>
