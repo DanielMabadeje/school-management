@@ -86,13 +86,21 @@
 
                             <div class="form-group">
                                 <label for="name">Paid Fees: <sup>*</sup></label>
-                                <input type="text" name="paid_fees" class="form-control form-control-lg " value="">
+                                
+                                <select name="paid_fees" class="form-control form-control-lg ">
+                                    <option value="true">True</option>
+                                    <option value="false">False</option>
+                                </select>
                                 <span class="invalid-feedback"><?= $data['gpa']; ?></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="name">Hostel: <sup>*</sup></label>
-                                <input type="text" name="hostel" class="form-control form-control-lg " value="">
+                                <!-- <input type="text" name="hostel" class="form-control form-control-lg " value=""> -->
+                                <select name="hostel_fees" class="form-control form-control-lg ">
+                                    <option value="true">True</option>
+                                    <option value="false">False</option>
+                                </select>
                                 <span class="invalid-feedback"><?= $data['gpa']; ?></span>
                             </div>
 

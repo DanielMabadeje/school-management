@@ -37,15 +37,39 @@ class Admins extends Controller
 
     public function viewStudent($id)
     {
-        // $this->view("");
+
+        $student = $this->studentModel->getStudentByUserId($id);
+
+        $data['student']=$student;
+        $this->view("admin/viewStudent", $data);
     }
 
     public function addParent()
     {
-        if ($_SERVER['REQUEST_METHOD']=="POST") {
-            # code...
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $data = [
+                'name' => trim($_POST['name']),
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['password']),
+                'student_username' => trim($_POST['student_uname']),
+                'memberId' => "parent",
+                'groupId' => 4,
+                'isApproved' => 1
+            ];
+
+            $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+
+            if ($this->adminModel->addParent($data)) {
+                flash('add_exam_success', 'Guardian Added successfully');
+                redirect('/');
+            } else {
+                # code...
+            }
         } else {
-            $this->view("admins/addParent");
+
+            $data['students'] = $this->getStudents();
+            $this->view("admin/addParent", $data);
         }
     }
 
@@ -81,6 +105,8 @@ class Admins extends Controller
                 'department_id' => trim($_POST['department_id']),
                 'level' => trim($_POST['level']),
                 'gpa' => trim($_POST['gpa']),
+                'paid_fees' => $_POST['paid_fees'],
+                'hostel_fees' => $_POST['hostel_fees'],
                 'memberId' => "student",
                 'groupId' => 2,
                 'isApproved' => 1

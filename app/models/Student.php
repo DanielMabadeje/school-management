@@ -170,4 +170,22 @@ class Student
             # code...
         }
     }
+
+    public function getStudentByUserId($id)
+    {
+
+        $this->db->query('SELECT students.user_id, students.name, students.regNo AS reg_no, students_profile.faculty_id, students_profile.department_id, students_profile.paid_fees, students_profile.paid_hostel_fees, students_profile.level, students_profile.gpa, departments.name AS department, faculties.name AS faculty
+            FROM students_profile
+            INNER JOIN students
+            ON students_profile.user_id=students.user_id
+            INNER JOIN departments
+            ON departments.id=students_profile.department_id
+            INNER JOIN faculties
+            ON faculties.id=students_profile.faculty_id
+            WHERE students.user_id=:user_id
+            ');
+
+        $this->db->bind(":user_id", $id);
+        return $this->db->single();
+    }
 }

@@ -37,6 +37,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?= URLROOT ?>/admins/addStudent">Register Student</a>
                         <a class="dropdown-item" href="<?= URLROOT ?>/admins/addStaff">Add Staff</a>
+                        <a class="dropdown-item" href="<?= URLROOT ?>/admins/addStaff">Add Parent</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?= URLROOT ?>/admins/students">View Students</a>
                     </div>

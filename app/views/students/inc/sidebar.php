@@ -57,14 +57,6 @@
 					<span>Tests</span></a>
 			</li>
 
-
-			<li>
-				<a href="<?= URLROOT ?>maps/mode?delivery&reusername=<?= $_SESSION['user_name'] ?>">
-					<span class="las la-user-circle"></span>
-					<span>Map</span></a>
-			</li>
-
-
 			<li>
 				<a href="<?= URLROOT ?>students/gpa">
 					<span class="las la-user-circle"></span>

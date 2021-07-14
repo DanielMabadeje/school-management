@@ -47,6 +47,21 @@ class Admin
         }
     }
 
+    public function addParent($data)
+    {
+
+        $user_id = $this->addUser($data);
+        $this->db->query('INSERT INTO guardians (student_id, parent_id) VALUES(:student_id, :parent_id)');
+        $this->db->bind(':parent_id', $user_id);
+        $this->db->bind(':student_id', $data['student_username']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function addStudent($data)
     {
         $user_id = $this->addUser($data);
@@ -70,13 +85,15 @@ class Admin
 
     public function addStudentProfile($data)
     {
-        $this->db->query('INSERT INTO students_profile (user_id, reg_no, faculty_id, department_id, level, gpa) VALUES(:user_id, :regno, :faculty_id, :department_id, :level, :gpa)');
+        $this->db->query('INSERT INTO students_profile (user_id, reg_no, faculty_id, department_id, level, gpa, paid_fees, paid_hostel_fees) VALUES(:user_id, :regno, :faculty_id, :department_id, :level, :gpa, :paid_fees, :hostel_fees)');
         $this->db->bind(':user_id', $data['user_id']);
         $this->db->bind(':regno', $data['regno']);
         $this->db->bind(':faculty_id', $data['faculty_id']);
         $this->db->bind(':department_id', $data['department_id']);
         $this->db->bind(':level', $data['level']);
         $this->db->bind(':gpa', $data['gpa']);
+        $this->db->bind(':paid_fees', $data['paid_fees']);
+        $this->db->bind(':hostel_fees', $data['hostel_fees']);
 
 
         if ($this->db->execute()) {
