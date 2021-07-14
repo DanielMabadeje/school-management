@@ -160,7 +160,11 @@ class Admins extends Controller
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             # code...
         } else {
-            $this->view("admin/addScore");
+
+
+            $data['student'] = $this->getStudentsProfile($user_id);
+            $data['courses'] = $this->getCoursesByLevel($data['student']->level);
+            $this->view("admin/addScore", $data);
         }
     }
     public function addTest()
@@ -310,6 +314,12 @@ class Admins extends Controller
         $data = $this->courseModel->getCourses();
         return $data;
     }
+
+    private function getCoursesByLevel()
+    {
+        $data = $this->courseModel->getCoursesByLevel();
+        return $data;
+    }
     private function getDepartments()
     {
         $data = $this->departmentModel->getDepartment();
@@ -319,6 +329,12 @@ class Admins extends Controller
     private function getFaculties()
     {
         $data = $this->facultyModel->getFaculty();
+        return $data;
+    }
+
+    private function getStudentsProfile($user_id)
+    {
+        $data = $this->studentModel->getStudentProfile($user_id);
         return $data;
     }
 }

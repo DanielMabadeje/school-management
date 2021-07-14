@@ -21,6 +21,13 @@ class Course
         return $this->db->resultSet();
     }
 
+    public function getCoursesByLevel($level)
+    {
+        $this->db->query("SELECT * FROM courses WHERE level=:level");
+        $this->db->bind(":level", $level);
+        return $this->db->resultSet();
+    }
+
     public function addCourse($data)
     {
         $this->db->query("INSERT INTO courses (name, department, level, description) VALUES(:name, :department, :level, :description)");
