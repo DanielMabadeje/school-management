@@ -31,7 +31,7 @@
                                 <span class="invalid-feedback"></span>
                             </div>
 
-                            <?php foreach($data['course']): ?>
+                            <?php foreach ($data['courses'] as $course) : ?>
 
                             <?php endforeach; ?>
 

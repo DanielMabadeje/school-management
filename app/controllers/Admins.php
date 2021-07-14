@@ -163,7 +163,10 @@ class Admins extends Controller
 
 
             $data['student'] = $this->getStudentsProfile($user_id);
-            $data['courses'] = $this->getCoursesByLevel($data['student']->level);
+
+            $level = $data['student']->level;
+
+            $data['courses'] = $this->getCoursesByLevel($level);
             $this->view("admin/addScore", $data);
         }
     }
@@ -315,9 +318,9 @@ class Admins extends Controller
         return $data;
     }
 
-    private function getCoursesByLevel()
+    private function getCoursesByLevel($level)
     {
-        $data = $this->courseModel->getCoursesByLevel();
+        $data = $this->courseModel->getCoursesByLevel($level);
         return $data;
     }
     private function getDepartments()

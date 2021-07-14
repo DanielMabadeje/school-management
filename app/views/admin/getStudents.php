@@ -32,6 +32,7 @@
                                         <td><?= $student->department ?></td>
                                         <td><?= date('Y') ?></td>
                                         <td>
+                                            <a href="<?= URLROOT ?>/admins/addScore/<?= $student->user_id ?>" class="btn btn-secondary text-white">Student Scores</a>
                                             <a href="<?= URLROOT ?>/admins/viewStudent/<?= $student->user_id ?>" class="btn btn-primary text-white">View Student</a>
                                             <a href="<?= URLROOT ?>/admins/updateGPA/<?= $student->user_id ?>" class="btn bg-other text-white">Update GPA</a>
                                         </td>
