@@ -40,7 +40,7 @@
 			</li>
 
 			<li>
-				<a href="<?= URLROOT ?>students/result">
+				<a href="<?= URLROOT ?>students/gpa">
 					<span class="las la-user-circle"></span>
 					<span>Results</span></a>
 			</li>
