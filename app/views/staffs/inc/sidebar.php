@@ -27,11 +27,11 @@
 					<span>Students</span></a>
 			</li>
 
-			<li>
+			<!-- <li>
 				<a href="<?= URLROOT ?>staffs/assignment">
 					<span class="las la-shipping-bag"></span>
 					<span>Assignment</span></a>
-			</li>
+			</li> -->
 
 			<li>
 				<a href="<?= URLROOT ?>staffs/attendance">
