@@ -15,6 +15,19 @@ class Maps extends Controller
 
     public function Index()
     {
+$this->checkIfParentIsLoggedIn();
         $this->view("map/index");
     }
+private function checkIfParentIsLoggedIn()
+    {
+        if (isLoggedIn()) {
+
+            if ($_SESSION['membership_group'] !== 'parent' || $_SESSION['membership_group'] !== 'admin') {
+                redirect('/');
+            }
+        } else {
+            redirect('/');
+        }
+    }
+
 }
